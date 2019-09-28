@@ -12,7 +12,6 @@ module.exports = function(app) {
       businessName: req.body.name,
       contactName: req.body.contactName,
       email: req.body.email,
-      location: req.body.location,
       state: req.body.state,
       city: req.body.city,
       zipCode: req.body.zipCode
@@ -26,7 +25,6 @@ module.exports = function(app) {
       businessName: req.body.name,
       contactName: req.body.contactName,
       email: req.body.email,
-      location: req.body.location,
       state: req.body.state,
       city: req.body.city,
       zipCode: req.body.zipCode

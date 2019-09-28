@@ -25,7 +25,7 @@ module.exports = function(app) {
     db.Volunteer.update({
       name: req.body.name,
       email: req.body.email,
-      location: req.body.location,
+      services: req.body.services,
       state: req.body.state,
       city: req.body.city,
       zipCode: req.body.zipCode
