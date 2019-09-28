@@ -11,7 +11,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 140]
+        len: [1, 140],
+        isAlpha: true
       }
     },
     email: {
@@ -26,21 +27,24 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 140]
+        len: [1, 140],
+        isAlpha: true
       }
     },
     state: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 140]
+        len: [1, 140],
+        isAlpha: true
       }
     },
     zipCode: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [5]
+        len: [5],
+        isNumeric: true
       }
     }
   });

@@ -8,7 +8,7 @@ module.exports = function(app) {
   });
 
   app.get("api/businesses/:state", function(req, res) {
-    db.Services.findAll({
+    db.Business.findAll({
       where: {
         state: req.params.state
       }
@@ -18,7 +18,7 @@ module.exports = function(app) {
   });
 
   app.get("api/businesses/:city", function(req, res) {
-    db.Services.findAll({
+    db.Business.findAll({
       where: {
         city: req.params.city
       }
@@ -28,7 +28,7 @@ module.exports = function(app) {
   });
 
   app.get("api/businesses/:zip", function(req, res) {
-    db.Services.findAll({
+    db.Business.findAll({
       where: {
         zipCode: req.params.zip
       }
