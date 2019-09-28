@@ -16,8 +16,11 @@ a {
   color: white;
 }
 
+a:hover {
+  color: rgba(160, 23, 23, 0.836)
+}
+
 body {
-  /* background-image: linear-gradient(rgba(206, 206, 206, 0.5),rgba(245, 241, 241, 0.5)), url("https://integration.gov.mt/en/ResidenceAndVisas/PublishingImages/Humanitarion-Other%20Reasons.jpg"); */
   background-size: cover;
   text-align: center;
 }
@@ -69,18 +72,6 @@ body {
   background-size: cover;
 }
 
-h2 {
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: auto;
-  padding-bottom: 50px;
-  padding-top: 200px;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 2px;
-  font-weight: bolder;
-  line-height: 1;
-}
-
 #shadows {
   position: relative;
   text-transform: uppercase;
@@ -89,9 +80,24 @@ h2 {
   letter-spacing: -0.05em;
   font-family: 'Anton', Arial, sans-serif;
   user-select: none;
-  text-transform: uppercase;
   font-size: 60px;
   transition: all 0.25s ease-out;
+}
+
+#h2shadows {
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: -15px 5px 30px #ced0d3;
+  color: white;
+  letter-spacing: 1;
+  font-family: 'Anton', Arial, sans-serif;
+  user-select: none;
+  transition: all 0.25s ease-out;
+  text-align: center;
+  padding: auto;
+  padding-bottom: 50px;
+  padding-top: 200px;
+  animation: text-shadow 1.5s ease-in-out;
 }
 
 h1 {
@@ -118,4 +124,9 @@ button {
   padding: 9px 10px;
 }
 
+form {
+  /* text-align: center; */
+  padding: 200px;
+  padding-top: 10px;
+}
 
