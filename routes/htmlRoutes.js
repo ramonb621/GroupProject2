@@ -1,27 +1,25 @@
-var db = require("../models");
+var path = require("path");
 
+// ROUTES
 module.exports = function(app) {
-  // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  app.get("/about", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/about.html"));
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+  app.get("/services", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/services.html"));
   });
+
+  app.get("/form", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/form.html"));
+  });
+
+  // I DON'T KNOW IF YOU GUYS WANT TO INCLUDE A NEWS PAGE BUT HERE'S A PATH JUST IN CASE
+  // app.get("/news", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/news.html"));
+  // });
 };
