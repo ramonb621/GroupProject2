@@ -3,11 +3,11 @@
 }
 
 .footer {
-  height: 100px;
-  width: 100%;
-  background-color: rgb(60,60,60);
+  /* height: 100px; */
+  /* width: 100%; */
+  /* background-color: rgb(60,60,60); */
   padding: 40px;
-  padding-left: 0px;
+  /* padding-left: 0px; */
   color: white;
 }
 
@@ -40,12 +40,12 @@ body {
 
 #introDiv {
   background-color: rgba(112, 109, 109, 0.288);
-  width: 800px;
+  /* width: 800px; */
   margin: auto;
   border-radius: 10px;
   line-height: 1.5;
   font-size: 20px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .businessReg {
