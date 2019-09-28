@@ -7,6 +7,36 @@ module.exports = function(app) {
     });
   });
 
+  app.get("api/businesses/:state", function(req, res) {
+    db.Services.findAll({
+      where: {
+        state: req.params.state
+      }
+    }).then(function(dbBusiness) {
+      res.json(dbBusiness);
+    });
+  });
+
+  app.get("api/businesses/:city", function(req, res) {
+    db.Services.findAll({
+      where: {
+        city: req.params.city
+      }
+    }).then(function(dbBusiness) {
+      res.json(dbBusiness);
+    });
+  });
+
+  app.get("api/businesses/:zip", function(req, res) {
+    db.Services.findAll({
+      where: {
+        zipCode: req.params.zip
+      }
+    }).then(function(dbBusiness) {
+      res.json(dbBusiness);
+    });
+  });
+
   app.post("/api/businesses", function(req, res) {
     db.Business.create({
       businessName: req.body.name,
