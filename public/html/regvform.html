@@ -48,20 +48,20 @@
 </div>
 </nav>
 
-<h2 id="h2shadows" style= "color: black; padding-top: 20px;">REGISTER YOUR BUSINESS</h2>
+<h2 id="h2shadows" style= "color: black; padding-top: 20px;">REGISTER AS A VOLUNTEER</h2>
 
 <form class="needs-validation" novalidate>
     <div class="form-row">
       <div class="col-md-4 mb-3">
-        <label for="validationCustom01">Business name</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="Business name" required>
+        <label for="validationCustom01">First name</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
       <div class="col-md-4 mb-3">
-        <label for="validationCustom02">Contact name</label>
-        <input type="text" class="form-control" id="validationCustom02" placeholder="Contact name" required>
+        <label for="validationCustom02">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -100,8 +100,19 @@
           Please provide a valid zip.
         </div>
       </div>
+
+      <h5>Relevant Experience</h5>
+<div class="input-group mb-3" id="other">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Checkbox for following text input">
     </div>
-    <button class="btn btn-primary" type="submit">Next</button>
+  </div>
+  <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Please provide a short description..." required>
+</div>
+
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
   </form>
   
   <script>
@@ -126,7 +137,6 @@
 
 <footer class="footer">
     <div class="container">
-        
       <p>
         <a href="" id="newsRoom">News Room</a> | |
         <a href="https://www.redcross.org/donate/donation.html/?donamt=0" target="_blank" id="donate">Donate
