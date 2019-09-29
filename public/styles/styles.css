@@ -71,7 +71,9 @@ body {
   background-image: linear-gradient(rgba(56, 56, 55, 0.479), rgba(114, 113, 113, 0.5)), url("../assets/images/imgsix.jpg");
   background-size: cover;
 }
-
+.results{ 
+  width:400px; height: 200px; overflow: scroll; font-weight: bold; 
+}
 #shadows {
   position: relative;
   text-transform: uppercase;
