@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HelpFull News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+        <header>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <a class="navbar-brand pl-4" href="index.html">HelpFull</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        Available Services
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="regbform.html">Register your business</a>
+                                        <a class="dropdown-item" href="services.html">Find services in your area</a>
+                                        <a class="dropdown-item" href="regvform.html">Register as a volunteer</a>
+                                        <a class="dropdown-item" href="regvform.html">Find volunteers in your area</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="results">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <!-- <th scope="col">Name</th> -->
+                    <th scope="col">Location</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Type</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="bodynews">
+                
+            </tbody>
+        </table>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+<script>
+    $(document).ready(function () {
+        var images = [
+            {"storm": "https://image.flaticon.com/icons/svg/263/263884.svg"},
+            {"earthquake": "https://image.flaticon.com/icons/svg/645/645712.svg"},
+            {"fire": "https://image.flaticon.com/icons/svg/599/599502.svg"},
+            {"flood": "https://image.flaticon.com/icons/svg/1098/1098150.svg"},
+            {"hurricane": "https://image.flaticon.com/icons/png/512/2120/2120367.png"}
+    ];
+        var state = "CA" //STATE INPUT?
+        //RETURNS 1000 BY STATE BEGINNING-PRESENT DEC 31, 2018
+        var query = "https://www.fema.gov/api/open/v1/DisasterDeclarationsSummaries?$filter=declarationDate%20ge%20%272018-12-31T04:00:00.000z%27%20and%20state%20eq%20%27" + state + "%27";
+            //NEWS BUTTON 
+            $.ajax({
+                url: query,
+                method: "GET"
+            }).then(function (response) {
+                // Log the resulting Object 
+                var res = response.DisasterDeclarationsSummaries;
+                console.log(res);
+                for (let i = 0; i < res.length; i++) {
+                    // DISPLAY FEMA INFO FROM DEC 12, 2018 - PRESENT
+                    // $("#results").append("<br>" + "FEMA Disaster #: " + res[i].disasterNumber +"<br>" + "Incident Type: " + res[i].incidentType + "<br>" + "Incident: " + res[i].title + "<br>" + "County: " + res[i].declaredCountyArea + "<br>" + "Disaster Declared On: " + moment(res[i].declarationDate).format('MMMM Do YYYY, h:mm:ss a') + "<br>");
+                    //loop looking inside image array for the event type and get the url of the image
+                   
+                    $("#bodynews").append(`
+                    <tr>
+                        <td>${res[i].declaredCountyArea}</td>
+                        <td>${res[i].declarationDate}</td>
+                        <td>${res[i].incidentType}</td>
+                        <td><img src="https://image.flaticon.com/icons/svg/263/263884.svg"></td>
+                    </tr>`)};
+            });    
+            
+            //FEMA API TO SEARCH FOR 2019 IN CA
+            // https://www.fema.gov/api/open/v1/DisasterDeclarationsSummaries?$filter=declarationDate%20ge%20%272018-09-01T04:00:00.000z%27%20and%20state%20eq%20%27CA%27
+            
+            //RETURNS 1000 RESULTS IN U.S. AFTER DEC 31, 2018
+            //"https://www.fema.gov/api/open/v1/DisasterDeclarationsSummaries?$filter=declarationDate%20ge%20%272018-12-31T04:00:00.000z%27"
+            
+            //https://www.fema.gov/openfema-api-documentation
+            
+            
+            // RELIEF WEB INFO
+            // https://api.reliefweb.int/v1/reports?appname=apidoc&query[value]=earthquake&preset=latest&fileds[include][]=url
+        });
+        
+        
+        // var db = require("../models");
+        
+        // module.exports = function(app) {
+            //   // Load index page
+            //   app.get("/", function(req, res) {
+                //     db.Example.findAll({}).then(function(dbExamples) {
+                    //       res.render("index", {
+                        //         msg: "Welcome!",
+                        //         examples: dbExamples
+                        //       });
+                        //     });
+                        //   });
+                        
+                        //   // Load example page and pass in an example by id
+                        //   app.get("/example/:id", function(req, res) {
+                            //     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+                                //       res.render("example", {
+                                    //         example: dbExample
+                                    //       });
+                                    //     });
+                                    //   });
+                                    
+                                    //   // Render 404 page for any unmatched routes
+                                    //   app.get("*", function(req, res) {
+                                        //     res.render("404");
+                                        //   });
+                                        // };
+
+</script>
+
+<footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 footer bg-dark">
+                    <p class="text-center">
+                        <a href="news.html" id="newsRoom">News Room</a> | |
+                        <a href="https://www.redcross.org/donate/donation.html/?donamt=0" target="_blank" id="donate">Donate
+                        </a>| |
+                        <a href="regvform.html" id="volForm">Volunteer</a> | |
+                        <a href="regbform.html" id="businessForm">Register Business</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
