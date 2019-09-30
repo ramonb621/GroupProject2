@@ -2,55 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HelpFull</title>
-    <link rel="icon" type="image/png" href="../assets/images/Helpinghands.png"/>
-    <!--Bootstrap CSS reference-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HelpFull</title>
+  <link rel="icon" type="image/png" href="../assets/images/Helpinghands.png" />
+  <!--Bootstrap CSS reference-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--Internal CSS referene-->
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!--Google Fonts reference-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap" rel="stylesheet">
-    
+  <!--Internal CSS referene-->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <!--Google Fonts reference-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">HelpFull</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">HelpFull</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact Us</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Available Services
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/regbform">Register Your Business</a>
-                <a class="dropdown-item" href="/regvform">Register as A Volunteer</a>
-                <a class="dropdown-item" href="/news">Browse News</a>
-                <a class="dropdown-item" href="/services">Assistance Near Me</a>
-            </div>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
-    </ul>
-</div>
-</nav>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            Available Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/regbform">Register Your Business</a>
+            <a class="dropdown-item" href="/regvform">Register as A Volunteer</a>
+            <a class="dropdown-item" href="/news">Browse News</a>
+            <a class="dropdown-item" href="/services">Assistance Near Me</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<h2 id="h2shadows" style= "color: black; padding-top: 20px;">REGISTER YOUR BUSINESS</h2>
+  <h2 id="h2shadows" style="color: black; padding-top: 20px;">REGISTER YOUR BUSINESS</h2>
 
-<form class="needs-validation" novalidate>
+  <form class="needs-validation" novalidate>
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">Business name</label>
@@ -71,7 +71,8 @@
         <div class="input-group">
           <div class="input-group-prepend">
           </div>
-          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required>
+          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Email"
+            aria-describedby="inputGroupPrepend" required>
           <div class="invalid-feedback">
             Please provide a valid email address.
           </div>
@@ -101,52 +102,53 @@
         </div>
       </div>
     </div>
-    <button class="btn btn-primary" type="submit">Next</button>
+    <a href="/regbform2"><button class="btn btn-primary" type="submit">Next</button></a>
   </form>
-  
+
   <script>
-  (function() {
-    'use strict';
-    window.addEventListener('load', function() {
-      var forms = document.getElementsByClassName('needs-validation');
-      var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
             event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  })();
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
   </script>
 
 
 
-<footer class="footer">
+  <footer class="footer">
     <div class="container">
-        
+
       <p>
         <a href="" id="newsRoom">News Room</a> | |
         <a href="https://www.redcross.org/donate/donation.html/?donamt=0" target="_blank" id="donate">Donate
         </a>| |
         <a href="" id="aboutUs">Volunteer</a> | |
-        <a href="" id="aboutUs">Register Business</a> 
-    </p>
-        
-    </div>
-</footer>
+        <a href="" id="aboutUs">Register Business</a>
+      </p>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-crossorigin="anonymous"></script>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
