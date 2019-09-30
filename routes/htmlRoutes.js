@@ -22,8 +22,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/html/contact.html"));
   });
 
-  // I DON'T KNOW IF YOU GUYS WANT TO INCLUDE A NEWS PAGE BUT HERE'S A PATH JUST IN CASE
-  // app.get("/news", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/news.html"));
-  // });
+  app.get("/news", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/news.html"));
+  });
 };
