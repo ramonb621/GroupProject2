@@ -10,6 +10,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/html/regbform.html"));
   });
 
+  app.get("/regbform2", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/regbform2.html"));
+  });
+
   app.get("/regvform", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/regvform.html"));
   });
