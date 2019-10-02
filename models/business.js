@@ -28,7 +28,9 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       validate: {
         len: [1, 140],
-        isAlpha: true
+        // NEED SOLUTION: code below does not accept alphabet stings with spaces
+        // isAlpha: true,
+        is: /^[a-zA-Z ]+$/i
       }
     },
     state: {

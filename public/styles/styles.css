@@ -7,10 +7,10 @@ body{
   line-height: 2.5;
 }
 
-.footer {
+footer {
   height: 100px;
   width: 100%;
-  background-color: rgb(60,60,60);
+  background-color: #343a40;
   padding: 40px;
   padding-left: 0px;
   color: white;
@@ -20,7 +20,11 @@ body{
   bottom: 0;
   /* added bottom, position, zindex, flex shrink -RB*/
 }
-
+.row, header{
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
 a {
   text-decoration: none;
   color: white;
