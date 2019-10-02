@@ -51,8 +51,8 @@ module.exports = function(app) {
 
   app.put("/api/services", function(req, res) {
     db.Services.update({
-      category: req.body.category,
-      description: req.body.description
+     category: req.body.category,
+     description: req.body.description
       },
       {
       where: {

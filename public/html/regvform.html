@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,33 +17,33 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">HelpFull</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact Us</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdownMenuLink" role="button"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Available Services
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="regbform.html">Register your business</a>
-        <a class="dropdown-item" href="services.html">Find services in your area</a>
-        <a class="dropdown-item" href="regvform.html">Register as a volunteer</a>
-        <a class="dropdown-item" href="services.html">Find volunteers in your area</a>
-      </div>
-    </li>
-  </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">HelpFull</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Available Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="regbform.html">Register Your Business</a>
+              <a class="dropdown-item" href="regvform.html">Register as A Volunteer</a>
+              <a class="dropdown-item" href="news.html">Browse News</a>
+              <a class="dropdown-item" href="services.html">Assistance Near Me</a>
+            </div>
+        </li>
+    </ul>
 </div>
 </nav>
 
@@ -87,8 +86,68 @@
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom04">State</label>
-      <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+        <label for="validationCustom04">State</label>
+        <!-- <input id="autocomplete" type="text" placeholder="State" required> -->
+        <input type="text" class="form-control" list="datalist" placeholder="State" onkeyup="ac(this.value)" required>
+
+        <datalist id="datalist"> 
+        <option value="AL"></option>        
+        <option value="AK"></option>
+        <option value="AR"></option>
+        <option value="AZ"></option>
+        <option value="CA"></option>
+        <option value="CO"></option>
+        <option value="CT"></option>
+        <option value="DC"></option>
+        <option value="DE"></option>
+        <option value="FL"></option>
+        <option value="GA"></option>
+        <option value="GU"></option>
+        <option value="HI"></option>
+        <option value="IA"></option>
+        <option value="ID"></option>
+        <option value="IL"></option>
+        <option value="IN"></option>
+        <option value="KS"></option>
+        <option value="KY"></option>
+        <option value="LA"></option>
+        <option value="MA"></option>
+        <option value="MD"></option>
+        <option value="ME"></option>
+        <option value="MI"></option>
+        <option value="MN"></option>
+        <option value="MO"></option>
+        <option value="MP"></option>
+        <option value="MS"></option>
+        <option value="MT"></option>
+        <option value="NC"></option>
+        <option value="ND"></option>
+        <option value="NE"></option>
+        <option value="NH"></option>
+        <option value="NJ"></option>
+        <option value="NM"></option>
+        <option value="NV"></option>
+        <option value="NY"></option>
+        <option value="OH"></option>
+        <option value="OK"></option>
+        <option value="OR"></option>
+        <option value="PA"></option>
+        <option value="PR"></option>
+        <option value="RI"></option>
+        <option value="SC"></option>
+        <option value="SD"></option>
+        <option value="TN"></option>
+        <option value="TX"></option>
+        <option value="UM"></option>
+        <option value="UT"></option>
+        <option value="VA"></option>
+        <option value="VI"></option>
+        <option value="VT"></option>
+        <option value="WA"></option>
+        <option value="WI"></option>
+        <option value="WV"></option>
+        <option value="WY"></option>
+    </datalist> 
       <div class="invalid-feedback">
         Please provide a valid state.
       </div>
@@ -132,19 +191,96 @@
     }, false);
   })();
 </script>
-<footer class="footer">
-  <div class="container">
-    <p>
-      <a href="news.html" id="newsRoom">News Room</a> | |
-      <a href="https://www.redcross.org/donate/donation.html/?donamt=0" target="_blank" id="donate">Donate
-      </a>| |
-      <a href="regvform.html" id="volForm">Volunteer</a> | |
-      <a href="regbform.html" id="businessForm">Register Business</a> 
-    </p>
-    
-  </div>
-</footer>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 footer bg-dark">
+                    <p class="text-center">
+                        Copyright © 2019 | 
+                        <a href="https://github.com/ramonb621/GroupProject2" id="github">GitHub Repo</a> | 
+                        <a href="https://www.fema.gov/openfema-api-documentation" id="fema">OpenFEMA API</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>
+        var states = [
+        "AK",
+        "AL",
+        "AR",
+        "AS",
+        "AZ",
+        "CA",
+        "CO",
+        "CT",
+        "DC",
+        "DE",
+        "FL",
+        "GA",
+        "GU",
+        "HI",
+        "IA",
+        "ID",
+        "IL",
+        "IN",
+        "KS",
+        "KY",
+        "LA",
+        "MA",
+        "MD",
+        "ME",
+        "MI",
+        "MN",
+        "MO",
+        "MP",
+        "MS",
+        "MT",
+        "NC",
+        "ND",
+        "NE",
+        "NH",
+        "NJ",
+        "NM",
+        "NV",
+        "NY",
+        "OH",
+        "OK",
+        "OR",
+        "PA",
+        "PR",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
+        "TX",
+        "UM",
+        "UT",
+        "VA",
+        "VI",
+        "VT",
+        "WA",
+        "WI",
+        "WV",
+        "WY"
+      ];
 
+var n = states.length;    
+  function ac(value) { 
+      document.getElementById('datalist').innerHTML = ''; 
+        l = value.length; 
+           for (var i = 0; i < n; i++) { 
+               if(((states[i].toLowerCase()).indexOf(value.toLowerCase()))>-1) 
+               {
+                   var node = document.createElement("option"); 
+                   var val = document.createTextNode(states[i]); 
+                    node.appendChild(val); 
+        
+                     document.getElementById("datalist").appendChild(node); 
+                   } 
+               } 
+           } 
+</script> 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 crossorigin="anonymous"></script>
@@ -155,5 +291,4 @@ crossorigin="anonymous"></script>
 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 crossorigin="anonymous"></script>
 </body>
-
 </html>

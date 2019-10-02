@@ -27,7 +27,7 @@ $(document).ready(function() {
     // DISPLAY FEMA INFO FROM DEC 12, 2018 - PRESENT
           // $(".results").append("<br>" + "FEMA Disaster #: " + res[i].disasterNumber +"<br>" + "Incident Type: " + res[i].incidentType + "<br>" + "Incident: " + res[i].title + "<br>" + "State: " + res[i].state +"<br>" + "County: " + res[i].declaredCountyArea + "<br>" + "Disaster Declared On: " + moment(res[i].declarationDate).format('MMMM Do YYYY, h:mm:ss a') + "<br>");
 
-          $("#bodynews").append(`
+          $("#bodynews").prepend(`
           <tr>
               <td>${moment(res[i].declarationDate).format('MMMM Do YYYY, h:mm:ss a')}</td>
               <td>${res[i].state}</td>
