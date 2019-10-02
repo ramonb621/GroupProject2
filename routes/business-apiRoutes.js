@@ -2,36 +2,42 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/businesses", function(req, res) {
-    db.Business.findAll({}).then(function(dbBusiness) {
+    let where = {};
+    if (req.query.state) {
+      where.state = req.query.state;
+    }
+    if (req.query.city) {
+      where.city = req.query.city;
+    }
+    if (req.query.zip) {
+      where.zipCode = req.query.zip;
+    }
+    db.Business.findAll({ where }).then(function(dbBusiness) {
       res.json(dbBusiness);
     });
   });
-
-  app.get("api/businesses/:state", function(req, res) {
+  app.get("/api/businesses/:category", function(req, res) {
+    let where = {};
+    if (req.query.state) {
+      where.state = req.query.state;
+    }
+    if (req.query.city) {
+      where.city = req.query.city;
+    }
+    if (req.query.zip) {
+      where.zipCode = req.query.zip;
+    }
     db.Business.findAll({
-      where: {
-        state: req.params.state
-      }
-    }).then(function(dbBusiness) {
-      res.json(dbBusiness);
-    });
-  });
-
-  app.get("api/businesses/:city", function(req, res) {
-    db.Business.findAll({
-      where: {
-        city: req.params.city
-      }
-    }).then(function(dbBusiness) {
-      res.json(dbBusiness);
-    });
-  });
-
-  app.get("api/businesses/:zip", function(req, res) {
-    db.Business.findAll({
-      where: {
-        zipCode: req.params.zip
-      }
+      where,
+      include: [
+        {
+          model: db.Services,
+          where: {
+            BusinessId: db.Sequelize.col("Business.id"),
+            category: req.params.category
+          }
+        }
+      ]
     }).then(function(dbBusiness) {
       res.json(dbBusiness);
     });
@@ -54,26 +60,29 @@ module.exports = function(app) {
 
   // Extra Routes
   app.put("/api/businesses", function(req, res) {
-    db.Business.update({
-      businessName: req.body.name,
-      contactName: req.body.contactName,
-      email: req.body.email,
-      state: req.body.state,
-      city: req.body.city,
-      zipCode: req.body.zipCode
-    }, {
-      where: {
-        id: req.body.id
+    db.Business.update(
+      {
+        businessName: req.body.name,
+        contactName: req.body.contactName,
+        email: req.body.email,
+        state: req.body.state,
+        city: req.body.city,
+        zipCode: req.body.zipCode
+      },
+      {
+        where: {
+          id: req.body.id
+        }
       }
-    }).then(function(dbBusiness) {
+    ).then(function(dbBusiness) {
       res.json(dbBusiness);
     });
   });
 
   app.delete("/api/businesses/:id", function(req, res) {
-    db.Business.destroy({ 
-      where: { 
-        id: req.params.id 
+    db.Business.destroy({
+      where: {
+        id: req.params.id
       }
     }).then(function(dbBusiness) {
       res.json(dbBusiness);
