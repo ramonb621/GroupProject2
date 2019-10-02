@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <!--Google Fonts reference-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -59,12 +59,12 @@
 
   <h2 id="h2shadows" style= "color: black; padding-top: 20px;">TYPES OF SERVICES PROVIDED</h2>
 
-  <form action="/api/services" method="POST" class="needs-validation" id="business-reg-form2" novalidate>
+  <form  class="needs-validation" id="business-reg-form2" novalidate>
     <div class="form"><h5>Food</h5>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <input type="checkbox" aria-label="Checkbox for following text input" name="food" id="food">
+            <input type="checkbox" aria-label="Checkbox for following text input" name="food" id="food" value="food">
           </div>
         </div>
         <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Please provide a short description..." id="food-desc">
@@ -74,7 +74,7 @@
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <input type="checkbox" aria-label="Checkbox for following text input" name="drinks" id="drinks">
+            <input type="checkbox" aria-label="Checkbox for following text input" name="drinks" id="drinks" value="drinks"
           </div>
         </div>
         <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Please provide a short description..." id="drinks-desc">
@@ -84,7 +84,7 @@
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <input type="checkbox" aria-label="Checkbox for following text input" name="shelter" id="shelter">
+            <input type="checkbox" aria-label="Checkbox for following text input" name="shelter" id="shelter" value="shelter">
           </div>
         </div>
         <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Please provide a short description..." id="shelter-desc">
@@ -94,7 +94,7 @@
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <input type="checkbox" aria-label="Checkbox for following text input" name="clothing" id="clothing">
+            <input type="checkbox" aria-label="Checkbox for following text input" name="clothing" id="clothing" value="clothing">
           </div>
         </div>
         <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Please provide a short description..." id="clothing-desc">
@@ -104,7 +104,7 @@
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <input type="checkbox" aria-label="Checkbox for following text input" name="trans" id="trans">
+            <input type="checkbox" aria-label="Checkbox for following text input" name="trans" id="trans" value="transportation">
           </div>
         </div>
         <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Please provide a short description..." id="trans-desc">
@@ -114,7 +114,7 @@
       <div class="input-group mb-3">
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input" name="other" id="other">
+              <input type="checkbox" aria-label="Checkbox for following text input" name="other" id="other" value="other">
             </div>
           </div>
           <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Please provide a short description..." id="other-desc">
@@ -138,7 +138,7 @@
           
       </div>
   </footer>
-
+  <script src="../js/regbform2.js"></script>
 </body>
 
 </html>

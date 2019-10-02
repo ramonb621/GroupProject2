@@ -7,7 +7,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("api/services/:category", function(req, res) {
+  app.get("/api/services/:category", function(req, res) {
     db.Services.findAll({
       where: {
         category: req.params.category
@@ -17,7 +17,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("api/services/:description", function(req, res) {
+  app.get("/api/services/:description", function(req, res) {
     db.Services.findAll({
       where: {
         description: req.params.description
@@ -27,7 +27,7 @@ module.exports = function(app) {
     });
   });
 // WILL WORK ON THIS WHEN FRONT-END IS DONE
-  app.get("api/services", function(req, res) {
+  app.get("/api/services", function(req, res) {
     var query = {};
     if (req.query.business_service_id) {
       query.BusinessId = req.query.author_id;
@@ -41,12 +41,16 @@ module.exports = function(app) {
   });
 
   app.post("/api/services", function(req, res) {
-    db.Services.create({
-      category: req.body.category,
-      description: req.body.description
-    }).then(function(dbServices) {
-      res.json(dbServices);
-    });
+    console.log("THIS IS WORKING");
+    console.log(req.body)
+    //console.log(req)
+    // db.Services.create({
+    //   category: req.body.category,
+    //   description: req.body.description
+    // }
+    // ).then(function(dbServices) {
+    //   res.json(dbServices);
+    // });
   });
 
   app.put("/api/services", function(req, res) {
