@@ -38,18 +38,21 @@ module.exports = function(app) {
   });
 
   app.post("/api/businesses", function(req, res) {
+    console.log(req.body);
     db.Business.create({
-      businessName: req.body.name,
-      contactName: req.body.contactName,
+      businessName: req.body.business,
+      contactName: req.body.contact,
       email: req.body.email,
-      state: req.body.state,
       city: req.body.city,
-      zipCode: req.body.zipCode
+      state: req.body.state,
+      zipCode: req.body.zip
     }).then(function(dbBusiness) {
-      res.json(dbBusiness);
+      // res.json(dbBusiness);
+      res.redirect("/regbform2");
     });
   });
 
+  // Extra Routes
   app.put("/api/businesses", function(req, res) {
     db.Business.update({
       businessName: req.body.name,
