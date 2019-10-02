@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Services.associate = function(models) {
-    Services.hasMany(models.BusinessServices, {});
+    Services.belongsToMany(models.Business, { through: "BusinessServices" });
   };
 
   return Services;
