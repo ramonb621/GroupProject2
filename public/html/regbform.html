@@ -97,7 +97,65 @@
       </div>
       <div class="col-md-3 mb-3">
         <label for="validationCustom04">State</label>
-        <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
+        <input type="text" class="form-control" list="datalist" id="state" name="state" placeholder="State" onkeyup="ac(this.value)" required>
+        <datalist id="datalist"> 
+            <option value="AL"></option>        
+            <option value="AK"></option>
+            <option value="AR"></option>
+            <option value="AZ"></option>
+            <option value="CA"></option>
+            <option value="CO"></option>
+            <option value="CT"></option>
+            <option value="DC"></option>
+            <option value="DE"></option>
+            <option value="FL"></option>
+            <option value="GA"></option>
+            <option value="GU"></option>
+            <option value="HI"></option>
+            <option value="IA"></option>
+            <option value="ID"></option>
+            <option value="IL"></option>
+            <option value="IN"></option>
+            <option value="KS"></option>
+            <option value="KY"></option>
+            <option value="LA"></option>
+            <option value="MA"></option>
+            <option value="MD"></option>
+            <option value="ME"></option>
+            <option value="MI"></option>
+            <option value="MN"></option>
+            <option value="MO"></option>
+            <option value="MP"></option>
+            <option value="MS"></option>
+            <option value="MT"></option>
+            <option value="NC"></option>
+            <option value="ND"></option>
+            <option value="NE"></option>
+            <option value="NH"></option>
+            <option value="NJ"></option>
+            <option value="NM"></option>
+            <option value="NV"></option>
+            <option value="NY"></option>
+            <option value="OH"></option>
+            <option value="OK"></option>
+            <option value="OR"></option>
+            <option value="PA"></option>
+            <option value="PR"></option>
+            <option value="RI"></option>
+            <option value="SC"></option>
+            <option value="SD"></option>
+            <option value="TN"></option>
+            <option value="TX"></option>
+            <option value="UM"></option>
+            <option value="UT"></option>
+            <option value="VA"></option>
+            <option value="VI"></option>
+            <option value="VT"></option>
+            <option value="WA"></option>
+            <option value="WI"></option>
+            <option value="WV"></option>
+            <option value="WY"></option>
+        </datalist> 
         <div class="invalid-feedback">
           Please provide a valid state.
         </div>
@@ -112,40 +170,14 @@
     </div>
     <button class="btn btn-primary" type="submit">Next</button>
   </form>
-  
-<!-- 
-  <script>
-    (function () {
-      'use strict';
-      window.addEventListener('load', function () {
-        var forms = document.getElementsByClassName('needs-validation');
-        var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-  </script> -->
-
-
 
   <footer class="footer">
     <div class="container">
-
-      <p>
-        <a href="/news" id="newsRoom">News Room</a> | |
-        <a href="https://www.redcross.org/donate/donation.html/?donamt=0" target="_blank" id="donate">Donate
-        </a>| |
-        <a href="/regvform" id="aboutUs">Volunteer</a> | |
-        <a href="/regbform" id="aboutUs">Register Business</a> 
-    </p>
-        
+        <p class="text-center">
+            Copyright © 2019 | 
+            <a href="https://github.com/ramonb621/GroupProject2" id="github">GitHub Repo</a> | 
+            <a href="https://www.fema.gov/openfema-api-documentation" id="fema">OpenFEMA API</a>
+        </p>
     </div>
   </footer>
 

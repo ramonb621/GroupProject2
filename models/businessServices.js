@@ -9,6 +9,7 @@ module.exports = function(sequelize, DataTypes) {
   };
 
   BusinessServices.associate = function(models) {
+    // A BusinessServices can't be created without a Services due to the foreign key constraint
     BusinessServices.belongsTo(models.Services, {
       foreignKey: {
         allowNull: false
