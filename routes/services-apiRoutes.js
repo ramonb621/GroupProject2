@@ -41,18 +41,16 @@ module.exports = function(app) {
   });
 
   app.post("/api/services", function(req, res) {
-    console.log("THIS IS WORKING");
-    console.log(req.body)
-    //console.log(req)
-    // db.Services.create({
-    //   category: req.body.category,
-    //   description: req.body.description
-    // }
-    // ).then(function(dbServices) {
-    //   res.json(dbServices);
-    // });
+    console.log(req.body);
+    db.Services.create({
+      category: req.body.category,
+      description: req.body.description
+    }).then(function(dbServices) {
+      res.json(dbServices);
+    });
   });
 
+  // Extra APIs 
   app.put("/api/services", function(req, res) {
     db.Services.update({
       category: req.body.category,
