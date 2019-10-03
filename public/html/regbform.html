@@ -10,19 +10,19 @@
   <!--Bootstrap CSS reference-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--Internal CSS referene-->
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!--Google Fonts reference-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  <!--Internal CSS referene-->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <!--Google Fonts reference-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap" rel="stylesheet">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  <!-- Bootstrap Script -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>   
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -79,7 +79,7 @@
         <div class="input-group">
           <div class="input-group-prepend">
           </div>
-          <input type="text" class="form-control" id="email" name="email"placeholder="Email"
+          <input type="text" class="form-control" id="email" name="email" placeholder="Email"
             aria-describedby="inputGroupPrepend" required>
           <div class="invalid-feedback">
             Please provide a valid email address.
@@ -97,7 +97,65 @@
       </div>
       <div class="col-md-3 mb-3">
         <label for="validationCustom04">State</label>
-        <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
+        <input type="text" class="form-control" list="datalist" id="state" name="state" placeholder="State" required>
+        <datalist id="datalist">
+          <option value="AL"></option>
+          <option value="AK"></option>
+          <option value="AR"></option>
+          <option value="AZ"></option>
+          <option value="CA"></option>
+          <option value="CO"></option>
+          <option value="CT"></option>
+          <option value="DC"></option>
+          <option value="DE"></option>
+          <option value="FL"></option>
+          <option value="GA"></option>
+          <option value="GU"></option>
+          <option value="HI"></option>
+          <option value="IA"></option>
+          <option value="ID"></option>
+          <option value="IL"></option>
+          <option value="IN"></option>
+          <option value="KS"></option>
+          <option value="KY"></option>
+          <option value="LA"></option>
+          <option value="MA"></option>
+          <option value="MD"></option>
+          <option value="ME"></option>
+          <option value="MI"></option>
+          <option value="MN"></option>
+          <option value="MO"></option>
+          <option value="MP"></option>
+          <option value="MS"></option>
+          <option value="MT"></option>
+          <option value="NC"></option>
+          <option value="ND"></option>
+          <option value="NE"></option>
+          <option value="NH"></option>
+          <option value="NJ"></option>
+          <option value="NM"></option>
+          <option value="NV"></option>
+          <option value="NY"></option>
+          <option value="OH"></option>
+          <option value="OK"></option>
+          <option value="OR"></option>
+          <option value="PA"></option>
+          <option value="PR"></option>
+          <option value="RI"></option>
+          <option value="SC"></option>
+          <option value="SD"></option>
+          <option value="TN"></option>
+          <option value="TX"></option>
+          <option value="UM"></option>
+          <option value="UT"></option>
+          <option value="VA"></option>
+          <option value="VI"></option>
+          <option value="VT"></option>
+          <option value="WA"></option>
+          <option value="WI"></option>
+          <option value="WV"></option>
+          <option value="WY"></option>
+        </datalist>
         <div class="invalid-feedback">
           Please provide a valid state.
         </div>
@@ -112,40 +170,14 @@
     </div>
     <button class="btn btn-primary" type="submit">Next</button>
   </form>
-  
-<!-- 
-  <script>
-    (function () {
-      'use strict';
-      window.addEventListener('load', function () {
-        var forms = document.getElementsByClassName('needs-validation');
-        var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-  </script> -->
-
-
 
   <footer class="footer">
     <div class="container">
-
-      <p>
-        <a href="/news" id="newsRoom">News Room</a> | |
-        <a href="https://www.redcross.org/donate/donation.html/?donamt=0" target="_blank" id="donate">Donate
-        </a>| |
-        <a href="/regvform" id="aboutUs">Volunteer</a> | |
-        <a href="/regbform" id="aboutUs">Register Business</a> 
-    </p>
-        
+      <p class="text-center">
+        Copyright © 2019 |
+        <a href="https://github.com/ramonb621/GroupProject2" id="github">GitHub Repo</a> |
+        <a href="https://www.fema.gov/openfema-api-documentation" id="fema">OpenFEMA API</a>
+      </p>
     </div>
   </footer>
 

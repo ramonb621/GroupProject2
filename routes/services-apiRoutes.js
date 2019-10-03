@@ -41,6 +41,7 @@ module.exports = function(app) {
   });
 
   app.post("/api/services", function(req, res) {
+    console.log(req.body);
     db.Services.create({
       category: req.body.category,
       description: req.body.description
@@ -49,6 +50,7 @@ module.exports = function(app) {
     });
   });
 
+  // Extra APIs 
   app.put("/api/services", function(req, res) {
     db.Services.update(
       {
