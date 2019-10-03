@@ -1,14 +1,11 @@
-$(document).ready(function() {
-  var userBusiness = $("#business");
-  var userContact = $("#contact");
-  var userEmail = $("#email");
-  var userCity = $("#city");
-  var userState = $("#state");
-  var userZip = $("#zip");
+$(document).ready(function () {
+    var userBusiness = $("#business");
+    var userContact = $("#contact");
+    var userEmail = $("#email");
+    var userCity = $("#city");
+    var userState = $("#state");
+    var userZip = $("#zip");
 
-<<<<<<< HEAD
-  $("#business-reg-form").on("submit", function(event) {
-=======
     var userBusiness = $("#business");
     var userContact = $("#contact");
     var userEmail = $("#email");
@@ -17,23 +14,10 @@ $(document).ready(function() {
     var userZip = $("#zip");
 
     $("#business-reg-form").on("submit", function (event) {
->>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
         // if (!userBusiness.val().trim() || !userContact.val().trim() || !userEmail.val().trim() || !userCity.val().trim() || !userState.val().trim() || !userZip.val().trim()) {
         //     event.preventDefault();
         //     return;
         // }
-<<<<<<< HEAD
-    if (!userBusiness.val().trim()){
-        userBusiness.addClass("is-invalid");
-        event.preventDefault();
-        } else if(!userContact.val().trim()){
-            userContact.addClass("is-invalid");
-            event.preventDefault();
-        } else if(!userEmail.val().trim()){
-            userEmail.addClass("is-invalid");
-            event.preventDefault();
-        } else if(!userCity.val().trim()){
-=======
         var states = [
             "AK",
             "AL",
@@ -104,17 +88,12 @@ $(document).ready(function() {
             userEmail.addClass("is-invalid");
             event.preventDefault();
         } else if (!userCity.val().trim()) {
->>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
             userCity.addClass("is-invalid");
             event.preventDefault();
         } else if (!userState.val().trim()) {
             userState.addClass("is-invalid");
             event.preventDefault();
-<<<<<<< HEAD
-        } else if(!userZip.val().trim()){
-=======
         } else if (!userZip.val().trim()) {
->>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
             userZip.addClass("is-invalid");
             event.preventDefault();
         }

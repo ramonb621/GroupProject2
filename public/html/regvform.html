@@ -32,26 +32,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-<<<<<<< HEAD
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact Us</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Available Services
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="regbform.html">Register Your Business</a>
-              <a class="dropdown-item" href="regvform.html">Register as A Volunteer</a>
-              <a class="dropdown-item" href="news.html">Browse News</a>
-              <a class="dropdown-item" href="services.html">Assistance Near Me</a>
-            </div>
-=======
       <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
@@ -70,7 +50,6 @@
             <a class="dropdown-item" href="/news">Browse News</a>
             <a class="dropdown-item" href="/services">Assistance Near Me</a>
           </div>
->>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
         </li>
       </ul>
     </div>
@@ -78,22 +57,6 @@
 
   <h2 id="h2shadows" style="color: black; padding-top: 20px;">REGISTER AS A VOLUNTEER</h2>
 
-<<<<<<< HEAD
-<form class="needs-validation" novalidate>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationCustom01">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationCustom02">Last name</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
-      <div class="valid-feedback">
-        Looks good!
-=======
   <form action="/api/volunteers" method="POST" id="volunteer-reg-form" class="needs-validation" novalidate>
     <div class="form-row">
       <div class="col-md-4 mb-3">
@@ -121,7 +84,6 @@
             Please provide a valid email address.
           </div>
         </div>
->>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
       </div>
     </div>
     <div class="col-md-4 mb-3">
@@ -146,71 +108,6 @@
     </div>
     <div class="col-md-3 mb-3">
         <label for="validationCustom04">State</label>
-<<<<<<< HEAD
-        <!-- <input id="autocomplete" type="text" placeholder="State" required> -->
-        <input type="text" class="form-control" list="datalist" placeholder="State" onkeyup="ac(this.value)" required>
-
-        <datalist id="datalist"> 
-        <option value="AL"></option>        
-        <option value="AK"></option>
-        <option value="AR"></option>
-        <option value="AZ"></option>
-        <option value="CA"></option>
-        <option value="CO"></option>
-        <option value="CT"></option>
-        <option value="DC"></option>
-        <option value="DE"></option>
-        <option value="FL"></option>
-        <option value="GA"></option>
-        <option value="GU"></option>
-        <option value="HI"></option>
-        <option value="IA"></option>
-        <option value="ID"></option>
-        <option value="IL"></option>
-        <option value="IN"></option>
-        <option value="KS"></option>
-        <option value="KY"></option>
-        <option value="LA"></option>
-        <option value="MA"></option>
-        <option value="MD"></option>
-        <option value="ME"></option>
-        <option value="MI"></option>
-        <option value="MN"></option>
-        <option value="MO"></option>
-        <option value="MP"></option>
-        <option value="MS"></option>
-        <option value="MT"></option>
-        <option value="NC"></option>
-        <option value="ND"></option>
-        <option value="NE"></option>
-        <option value="NH"></option>
-        <option value="NJ"></option>
-        <option value="NM"></option>
-        <option value="NV"></option>
-        <option value="NY"></option>
-        <option value="OH"></option>
-        <option value="OK"></option>
-        <option value="OR"></option>
-        <option value="PA"></option>
-        <option value="PR"></option>
-        <option value="RI"></option>
-        <option value="SC"></option>
-        <option value="SD"></option>
-        <option value="TN"></option>
-        <option value="TX"></option>
-        <option value="UM"></option>
-        <option value="UT"></option>
-        <option value="VA"></option>
-        <option value="VI"></option>
-        <option value="VT"></option>
-        <option value="WA"></option>
-        <option value="WI"></option>
-        <option value="WV"></option>
-        <option value="WY"></option>
-    </datalist> 
-      <div class="invalid-feedback">
-        Please provide a valid state.
-=======
         <input type="text" class="form-control" list="datalist" id="state" name="state" placeholder="State" required>
         <datalist id="datalist">
           <option value="AL"></option>
@@ -273,7 +170,6 @@
         <div class="invalid-feedback">
           Please provide a valid state.
         </div>
->>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
       </div>
     </div>
     <div class="col-md-3 mb-3">
@@ -291,105 +187,6 @@
           <input type="checkbox" aria-label="Checkbox for following text input">
         </div>
       </div>
-<<<<<<< HEAD
-      <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Please provide a short description..." required>
-    </div>
-    
-  </div>
-  <button class="btn btn-primary" type="submit">Submit</button>
-</form>
-
-<script>
-  (function() {
-    'use strict';
-    window.addEventListener('load', function() {
-      var forms = document.getElementsByClassName('needs-validation');
-      var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  })();
-</script>
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 footer bg-dark">
-                    <p class="text-center">
-                        Copyright © 2019 | 
-                        <a href="https://github.com/ramonb621/GroupProject2" id="github">GitHub Repo</a> | 
-                        <a href="https://www.fema.gov/openfema-api-documentation" id="fema">OpenFEMA API</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-<script>
-        var states = [
-        "AK",
-        "AL",
-        "AR",
-        "AS",
-        "AZ",
-        "CA",
-        "CO",
-        "CT",
-        "DC",
-        "DE",
-        "FL",
-        "GA",
-        "GU",
-        "HI",
-        "IA",
-        "ID",
-        "IL",
-        "IN",
-        "KS",
-        "KY",
-        "LA",
-        "MA",
-        "MD",
-        "ME",
-        "MI",
-        "MN",
-        "MO",
-        "MP",
-        "MS",
-        "MT",
-        "NC",
-        "ND",
-        "NE",
-        "NH",
-        "NJ",
-        "NM",
-        "NV",
-        "NY",
-        "OH",
-        "OK",
-        "OR",
-        "PA",
-        "PR",
-        "RI",
-        "SC",
-        "SD",
-        "TN",
-        "TX",
-        "UM",
-        "UT",
-        "VA",
-        "VI",
-        "VT",
-        "WA",
-        "WI",
-        "WV",
-        "WY"
-      ];
-=======
 
       <h5>Relevant Experience</h5>
       <div class="input-group mb-3" id="other">
@@ -405,24 +202,14 @@
     </div>
     <button class="btn btn-primary" type="submit">Submit</button>
   </form>
->>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
 
   <footer class="footer">
     <div class="container">
-<<<<<<< HEAD
-        <p class="text-center">
-            Copyright © 2019 |
-            <a href="https://github.com/ramonb621/GroupProject2" id="github">GitHub Repo</a> |
-            <a href="https://www.fema.gov/openfema-api-documentation" id="fema">OpenFEMA API</a>
-          </p>
-        
-=======
       <p class="text-center">
         Copyright © 2019 |
         <a href="https://github.com/ramonb621/GroupProject2" id="github">GitHub Repo</a> |
         <a href="https://www.fema.gov/openfema-api-documentation" id="fema">OpenFEMA API</a>
       </p>
->>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
     </div>
   </footer>
 
