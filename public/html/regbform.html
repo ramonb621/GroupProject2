@@ -10,19 +10,19 @@
   <!--Bootstrap CSS reference-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--Internal CSS referene-->
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!--Google Fonts reference-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  <!--Internal CSS referene-->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <!--Google Fonts reference-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap" rel="stylesheet">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  <!-- Bootstrap Script -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>   
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -79,7 +79,7 @@
         <div class="input-group">
           <div class="input-group-prepend">
           </div>
-          <input type="text" class="form-control" id="email" name="email"placeholder="Email"
+          <input type="text" class="form-control" id="email" name="email" placeholder="Email"
             aria-describedby="inputGroupPrepend" required>
           <div class="invalid-feedback">
             Please provide a valid email address.
@@ -97,9 +97,13 @@
       </div>
       <div class="col-md-3 mb-3">
         <label for="validationCustom04">State</label>
+<<<<<<< HEAD
         <!-- <input id="autocomplete" type="text" placeholder="State" required> -->
         <input type="text" class="form-control" list="datalist" placeholder="State" onkeyup="ac(this.value)" required>
 
+=======
+        <input type="text" class="form-control" list="datalist" id="state" name="state" placeholder="State" required>
+>>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
         <datalist id="datalist">
           <option value="AL"></option>
           <option value="AK"></option>
@@ -158,7 +162,10 @@
           <option value="WV"></option>
           <option value="WY"></option>
         </datalist>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
         <div class="invalid-feedback">
           Please provide a valid state.
         </div>
@@ -173,6 +180,7 @@
     </div>
     <button class="btn btn-primary" type="button">Next</button>
   </form>
+<<<<<<< HEAD
   <footer>
     <div class="container-fluid">
       <div class="row">
@@ -278,6 +286,18 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+=======
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-center">
+        Copyright © 2019 |
+        <a href="https://github.com/ramonb621/GroupProject2" id="github">GitHub Repo</a> |
+        <a href="https://www.fema.gov/openfema-api-documentation" id="fema">OpenFEMA API</a>
+      </p>
+    </div>
+  </footer>
+>>>>>>> 987e5871e6f19b2321ee2eae22f37b988f092214
 
 </body>
 
