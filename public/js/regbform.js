@@ -115,6 +115,5 @@ $(document).ready(function () {
         if (userZip.val().trim()) {
             userZip.addClass("is-valid").removeClass("is-invalid");
         }
-
     });
 });

@@ -1,15 +1,15 @@
 $(document).ready(function () {
 
     $(document).on("submit", "#business-reg-form2", handleAuthorFormSubmit);
+    // $("#business-reg-form2").on("submit", function (event) {});
 
     var foodD = $("#food-desc");
     var drinksD = $("#drinks-desc");
-    // var shelterD = $("#shelter-desc");
-    // var clothesD = $("#clothing-desc")
-    // var transD = $("#trans-desc");
-    // var otherD = $("#other-desc");
+    var shelterD = $("#shelter-desc");
+    var clothesD = $("#clothing-desc");
+    var transD = $("#trans-desc");
+    var otherD = $("#other-desc");
 
-    // $("#business-reg-form2").on("submit", function (event) {
     function handleAuthorFormSubmit(event) {
         event.preventDefault();
         if (document.getElementById('Food').checked) {
@@ -36,77 +36,75 @@ $(document).ready(function () {
                 addToServ(drinks);
             }
         }
+        if (document.getElementById('Shelter').checked) {
+            if (!shelterD.val().trim()) {
+                shelterD.addClass("is-invalid");
+                event.preventDefault();
+            } else {
+                var shelter = {
+                    category: $("#Shelter").attr("value"),
+                    description: shelterD.val().trim()
+                };
+                addToServ(shelter);
+            }
+        }
+        if (document.getElementById('Clothing').checked) {
+            if (!clothesD.val().trim()) {
+                clothesD.addClass("is-invalid");
+                event.preventDefault();
+            } else {
+                var clothing = {
+                    category: $("#Clothing").attr("value"),
+                    description: clothesD.val().trim()
+                };
+                addToServ(clothing);
+            }
+        }
+        if (document.getElementById('Transportation').checked) {
+            if (!transD.val().trim()) {
+                transD.addClass("is-invalid");
+                event.preventDefault();
+            } else {
+                var transportation = {
+                    category: $("#Transportation").attr("value"),
+                    description: transD.val().trim()
+                };
+                addToServ(transportation);
+            }
+        }
+        if (document.getElementById('Other').checked) {
+            if (!otherD.val().trim()) {
+                otherD.addClass("is-invalid");
+                event.preventDefault();
+            } else {
+                var other = {
+                    category: $("#Other").attr("value"),
+                    description: otherD.val().trim()
+                };
+                addToServ(other);
+            }
+        }
+
+        $("#Food").val("");
+        $("#Drinks").val("");
+        $("#Shelter").val("");
+        $("#Clothing").val("");
+        $("#Transportation").val("");
+        $("#Other").val("");
+
+        $("#regbform2").empty();
+        $("#regbform2").append(
+            "<p id='confirm'><b> We've received your form. Thank you!</b></p>"
+        );
+        $("#regbform2").append(
+            "<a href='/'><button class='btn btn-info' type='submit'>HOME</button></a>"
+        );
     }
+
     function addToServ(serviceData) {
         $.post("/api/services", serviceData).then(function(data){
             console.log(data);
         });
     }
-    // if ("input[type='checkbox'][name='shelter']:checked") {
-    //     // return $(this).val();
-    //     addToServ({
-    //         category: $(this).val().trim()
-    //     })
-    // }
-    // if ("input[type='checkbox'][name='clothing']:checked") {
-    //     // return $(this).val();
-    //     addToServ({
-    //         category: $(this).val().trim()
-    //     })
-    // }
-    // if ("input[type='checkbox'][name='trans']:checked") {
-    //     // return $(this).val();
-    //     addToServ({
-    //         category: $(this).val().trim()
-    //     })
-    // }
-    // if ("input[type='checkbox'][name='other']:checked") {
-    //     // return $(this).val();
-    //     addToServ({
-    //         category: $(this).val().trim()
-    //     })
-    // }
-    // function addToServ(serviceData) {
-    //     $.post("/api/services", serviceData);
-    // }
-
-    //     if (food && foodD.val().trim() !== "") {
-    //         foodD.addClass("is-valid");
-    //     } else if (food && foodD.val().trim() === "") {
-    //         foodD.addClass("is-invalid");
-    //         event.preventDefault();
-    //     }
-    //     if (drinksD.val().trim() !== "") {
-    //         drinksD.addClass("is-valid");
-    //     } else {
-    //         drinksD.addClass("is-invalid");
-    //         event.preventDefault();
-    //     }
-    //     if (shelterD.val().trim() !== "") {
-    //         shelterD.addClass("is-valid");
-    //     } else {
-    //         shelterD.addClass("is-invalid");
-    //         event.preventDefault();
-    //     }
-    //     if (clothesD.val().trim() !== "") {
-    //         clothesD.addClass("is-valid");
-    //     } else {
-    //         clothesD.addClass("is-invalid");
-    //         event.preventDefault();
-    //     }
-    //     if (transD.val().trim() !== "") {
-    //         transD.addClass("is-valid");
-    //     } else {
-    //         transD.addClass("is-invalid");
-    //         event.preventDefault();
-    //     }
-    //     if (otherD.val().trim() !== "") {
-    //         otherD.addClass("is-valid");
-    //     } else {
-    //         otherD.addClass("is-invalid");
-    //         event.preventDefault();
-    //     }
-
-    // });
 
 });
