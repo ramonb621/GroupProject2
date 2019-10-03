@@ -26,7 +26,7 @@ module.exports = function(app) {
       res.json(dbServices);
     });
   });
-// WILL WORK ON THIS WHEN FRONT-END IS DONE
+  // WILL WORK ON THIS WHEN FRONT-END IS DONE
   app.get("api/services", function(req, res) {
     var query = {};
     if (req.query.business_service_id) {
@@ -50,23 +50,25 @@ module.exports = function(app) {
   });
 
   app.put("/api/services", function(req, res) {
-    db.Services.update({
-     category: req.body.category,
-     description: req.body.description
+    db.Services.update(
+      {
+        category: req.body.category,
+        description: req.body.description
       },
       {
-      where: {
-        id: req.body.id
+        where: {
+          id: req.body.id
+        }
       }
-    }).then(function(dbServices) {
+    ).then(function(dbServices) {
       res.json(dbServices);
     });
   });
 
   app.delete("/api/services/:id", function(req, res) {
-    db.Services.destroy({ 
-      where: { 
-        id: req.params.id 
+    db.Services.destroy({
+      where: {
+        id: req.params.id
       }
     }).then(function(dbServices) {
       res.json(dbServices);

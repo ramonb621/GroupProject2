@@ -11,8 +11,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 140],
-        isAlpha: true
+        len: [1, 140]
       }
     },
     email: {
@@ -28,8 +27,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       validate: {
         len: [1, 140],
-        // NEED SOLUTION: code below does not accept alphabet stings with spaces
-        // isAlpha: true,
         is: /^[a-zA-Z ]+$/i
       }
     },
@@ -37,8 +34,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 140],
-        isAlpha: true
+        len: [2]
       }
     },
     zipCode: {
@@ -52,7 +48,7 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Business.associate = function(models) {
-    Business.hasMany(models.BusinessServices, {});
+    Business.belongsToMany(models.Services, { through: "BusinessServices" });
   };
 
   return Business;
