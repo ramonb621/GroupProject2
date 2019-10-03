@@ -66,7 +66,44 @@
         </div>
     </footer>
 
+<script>
+var  zipCode = ""
+var geoData = {
+    state:"",
+    city:"",
+    zipCode: zipCode
+}
+//// create a route called /api/businesses/services and return all services related with a geodata
 
+//call the route asking for the business with this zipcode
+$.get("/api/businesses/services",geoData, function(dataBus){
+    console.log(services)
+
+}).then(function(){
+// loop and append to the table on the page
+})
+
+    // we need a route that receive all the busnesses id and come back with all the services
+// we will receive an array with objects (services with their business info )
+
+//we loop the arry and create a table with the info
+
+
+
+    //loop for all the services associates to the businesses
+//     var servicesArray = []
+//    for (var i=0; i < dataBus.length; i++){   //// this  is an async issue we can't loop because we do't when is finished 
+
+//     $.get("/api/services", idBus, function(services){
+//         servicesArray.push(services)
+//     })
+
+//    }
+
+
+
+
+</script>
 </body>
 
 </html>

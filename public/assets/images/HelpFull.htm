@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///Users/marinemekhakyan/GroupProject2/public/html/regbform.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HelpFull</title>
+    <link rel="icon" type="image/png" href="file:///Users/marinemekhakyan/GroupProject2/public/assets/images/Helpinghands.png">
+    <!--Bootstrap CSS reference-->
+    <link rel="stylesheet" href="./HelpFull_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Internal CSS referene-->
+    <link rel="stylesheet" href="./HelpFull_files/styles.css">
+    <!--Google Fonts reference-->
+    <link href="./HelpFull_files/css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="file:///">HelpFull</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="file:///">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="file:///contact">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="file:///Users/marinemekhakyan/GroupProject2/public/html/regbform.html#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Available Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="file:///regbform">Register Your Business</a>
+                <a class="dropdown-item" href="file:///regvform">Register as A Volunteer</a>
+                <a class="dropdown-item" href="file:///news">Browse News</a>
+                <a class="dropdown-item" href="file:///services">Assistance Near Me</a>
+            </div>
+        </li>
+    </ul>
+</div>
+</nav>
+
+<h2 id="h2shadows" style="color: black; padding-top: 20px;">REGISTER YOUR BUSINESS</h2>
+
+<form class="needs-validation" novalidate="">
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Business name</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="Business name" required="">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom02">Contact name</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Contact name" required="">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustomUsername">Email</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+          </div>
+          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required="">
+          <div class="invalid-feedback">
+            Please provide a valid email address.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03">City</label>
+        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required="">
+        <div class="invalid-feedback">
+          Please provide a valid city.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom04">State</label>
+        <input id="autocomplete" type="text" placeholder="State" required="">
+        <div class="invalid-feedback">
+          Please provide a valid state.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom05">Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required="">
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="button">Next</button>
+  </form>
+  
+  <!-- <script>
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      var forms = document.getElementsByClassName('needs-validation');
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script> -->
+
+
+
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 footer bg-dark">
+                <p class="text-center">
+                    Copyright © 2019 | 
+                    <a href="https://github.com/ramonb621/GroupProject2" id="github">GitHub Repo</a> | 
+                    <a href="https://www.fema.gov/openfema-api-documentation" id="fema">OpenFEMA API</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  var states = [
+  "AK",
+  "AL",
+  "AR",
+  "AS",
+  "AZ",
+  "CA",
+  "CO",
+  "CT",
+  "DC",
+  "DE",
+  "FL",
+  "GA",
+  "GU",
+  "HI",
+  "IA",
+  "ID",
+  "IL",
+  "IN",
+  "KS",
+  "KY",
+  "LA",
+  "MA",
+  "MD",
+  "ME",
+  "MI",
+  "MN",
+  "MO",
+  "MP",
+  "MS",
+  "MT",
+  "NC",
+  "ND",
+  "NE",
+  "NH",
+  "NJ",
+  "NM",
+  "NV",
+  "NY",
+  "OH",
+  "OK",
+  "OR",
+  "PA",
+  "PR",
+  "RI",
+  "SC",
+  "SD",
+  "TN",
+  "TX",
+  "UM",
+  "UT",
+  "VA",
+  "VI",
+  "VT",
+  "WA",
+  "WI",
+  "WV",
+  "WY"
+];
+
+var n= states.length;    
+  
+     function ac(value) { 
+        document.getElementById('datalist').innerHTML = ''; 
+        
+           
+         l=value.length; 
+         //input query length 
+     for (var i = 0; i<n; i++) { 
+         if(((states[i].toLowerCase()).indexOf(value.toLowerCase()))>-1) 
+         {
+             var node = document.createElement("option"); 
+             var val = document.createTextNode(states[i]); 
+              node.appendChild(val); 
+  
+               document.getElementById("datalist").appendChild(node); 
+             } 
+         } 
+     } 
+
+<input type="text" list="datalist" onkeyup="ac(this.value)"> 
+
+<datalist id="datalist"> 
+  
+<option value="CA"></option> 
+<option value="WA"></option> 
+<option value="NY"></option> 
+
+  
+</datalist> 
+   
+</script> 
+
+
+<script src="./HelpFull_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="./HelpFull_files/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="./HelpFull_files/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+</body></html>
