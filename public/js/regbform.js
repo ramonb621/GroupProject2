@@ -12,6 +12,66 @@ $(document).ready(function () {
         //     event.preventDefault();
         //     return;
         // }
+        var states = [
+            "AK",
+            "AL",
+            "AR",
+            "AS",
+            "AZ",
+            "CA",
+            "CO",
+            "CT",
+            "DC",
+            "DE",
+            "FL",
+            "GA",
+            "GU",
+            "HI",
+            "IA",
+            "ID",
+            "IL",
+            "IN",
+            "KS",
+            "KY",
+            "LA",
+            "MA",
+            "MD",
+            "ME",
+            "MI",
+            "MN",
+            "MO",
+            "MP",
+            "MS",
+            "MT",
+            "NC",
+            "ND",
+            "NE",
+            "NH",
+            "NJ",
+            "NM",
+            "NV",
+            "NY",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "PR",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UM",
+            "UT",
+            "VA",
+            "VI",
+            "VT",
+            "WA",
+            "WI",
+            "WV",
+            "WY"
+        ];
+        // If User didn't insert an input
         if (!userBusiness.val().trim()) {
             userBusiness.addClass("is-invalid");
             event.preventDefault();
@@ -31,7 +91,7 @@ $(document).ready(function () {
             userZip.addClass("is-invalid");
             event.preventDefault();
         }
-
+        // If User Entered the Input
         if (userBusiness.val().trim()) {
             userBusiness.addClass("is-valid").removeClass("is-invalid");
         }
@@ -45,80 +105,11 @@ $(document).ready(function () {
             userCity.addClass("is-valid").removeClass("is-invalid");
         }
         if (userState.val().trim()) {
-            userState.addClass("is-valid").removeClass("is-invalid");
-            var states = [
-                "AK",
-                "AL",
-                "AR",
-                "AS",
-                "AZ",
-                "CA",
-                "CO",
-                "CT",
-                "DC",
-                "DE",
-                "FL",
-                "GA",
-                "GU",
-                "HI",
-                "IA",
-                "ID",
-                "IL",
-                "IN",
-                "KS",
-                "KY",
-                "LA",
-                "MA",
-                "MD",
-                "ME",
-                "MI",
-                "MN",
-                "MO",
-                "MP",
-                "MS",
-                "MT",
-                "NC",
-                "ND",
-                "NE",
-                "NH",
-                "NJ",
-                "NM",
-                "NV",
-                "NY",
-                "OH",
-                "OK",
-                "OR",
-                "PA",
-                "PR",
-                "RI",
-                "SC",
-                "SD",
-                "TN",
-                "TX",
-                "UM",
-                "UT",
-                "VA",
-                "VI",
-                "VT",
-                "WA",
-                "WI",
-                "WV",
-                "WY"
-            ];
-        
-            var n = states.length;
-            function ac(value) {
-                document.getElementById('datalist').innerHTML = '';
-                l = value.length;
-                for (var i = 0; i < n; i++) {
-                    if (((states[i].toLowerCase()).indexOf(value.toLowerCase())) > -1) {
-                        var node = document.createElement("option");
-                        var val = document.createTextNode(states[i]);
-                        node.appendChild(val);
-        
-                        document.getElementById("datalist").appendChild(node);
-                    }
-                }
+            if (states.indexOf(userState.val().trim()) !== -1) {
+                userState.addClass("is-valid").removeClass("is-invalid");
+            } else {
+                userState.addClass("is-invalid");
+                event.preventDefault();
             }
         }
         if (userZip.val().trim()) {

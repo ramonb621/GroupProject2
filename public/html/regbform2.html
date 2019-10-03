@@ -14,12 +14,12 @@
   <link rel="stylesheet" href="../styles/styles.css">
   <!--Google Fonts reference-->
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
+  <!-- Bootstrap Script -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
@@ -59,85 +59,89 @@
 
   <h2 id="h2shadows" style="color: black; padding-top: 20px;">TYPES OF SERVICES PROVIDED</h2>
 
-  <div class="form">
-    <h5>Food</h5>
-    <div class="input-group mb-3" id="food">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" name="Food" id="Food" aria-label="Checkbox for following text input" checked>
+  <!-- <form action="/api/services" method="POST" class="needs-validation" id="business-reg-form2" novalidate> -->
+  <form class="needs-validation" id="business-reg-form2" novalidate>
+    <div class="form">
+      <h5>Food</h5>
+      <div class="input-group mb-3" id="food">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="category" value="Food" id="Food"
+              aria-label="Checkbox for following text input">
+          </div>
         </div>
+        <input type="text" name="description" id="food-desc" class="form-control" aria-label="Text input with checkbox"
+          placeholder="Please provide a short description...">
       </div>
-      <input type="text" id="food-desc" class="form-control" aria-label="Text input with checkbox"
-        placeholder="Please provide a short description...">
-    </div>
 
-    <h5>Drinks</h5>
-    <div class="input-group mb-3" id="drinks">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" name="Drinks" id="Drinks" aria-label="Checkbox for following text input">
+      <h5>Drinks</h5>
+      <div class="input-group mb-3" id="drinks">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="category" value="Drinks" id="Drinks"
+              aria-label="Checkbox for following text input">
+          </div>
         </div>
+        <input type="text" name="description" id="drinks-desc" class="form-control"
+          aria-label="Text input with checkbox" placeholder="Please provide a short description...">
       </div>
-      <input type="text" id="drinks-desc" class="form-control" aria-label="Text input with checkbox"
-        placeholder="Please provide a short description...">
-    </div>
 
-    <h5>Shelter</h5>
-    <div class="input-group mb-3" id="shelter">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" name="Shelter" id="Shelter" aria-label="Checkbox for following text input">
+      <h5>Shelter</h5>
+      <div class="input-group mb-3" id="shelter">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="Shelter" id="Shelter" aria-label="Checkbox for following text input">
+          </div>
         </div>
+        <input type="text" id="shelter-desc" class="form-control" aria-label="Text input with checkbox"
+          placeholder="Please provide a short description...">
       </div>
-      <input type="text" id="shelter-desc" class="form-control" aria-label="Text input with checkbox"
-        placeholder="Please provide a short description...">
-    </div>
 
-    <h5>Clothing</h5>
-    <div class="input-group mb-3" id="clothing">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" name="Clothing" id="Clothing" aria-label="Checkbox for following text input">
+      <h5>Clothing</h5>
+      <div class="input-group mb-3" id="clothing">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="Clothing" id="Clothing" aria-label="Checkbox for following text input">
+          </div>
         </div>
+        <input type="text" id="clothing-desc" class="form-control" aria-label="Text input with checkbox"
+          placeholder="Please provide a short description...">
       </div>
-      <input type="text" id="clothing-desc" class="form-control" aria-label="Text input with checkbox"
-        placeholder="Please provide a short description...">
-    </div>
 
-    <h5>Transportation</h5>
-    <div class="input-group mb-3" id="transportation">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" name="Transportation" id="Transportation" aria-label="Checkbox for following text input">
+      <h5>Transportation</h5>
+      <div class="input-group mb-3" id="transportation">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="Transportation" id="Transportation"
+              aria-label="Checkbox for following text input">
+          </div>
         </div>
+        <input type="text" id="trans-desc" class="form-control" aria-label="Text input with checkbox"
+          placeholder="Please provide a short description...">
       </div>
-      <input type="text" id="trans-desc" class="form-control" aria-label="Text input with checkbox"
-        placeholder="Please provide a short description...">
-    </div>
 
-    <h5>Other</h5>
-    <div class="input-group mb-3" id="other">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" name="Other" id="Other" aria-label="Checkbox for following text input">
+      <h5>Other</h5>
+      <div class="input-group mb-3" id="other">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="Other" id="Other" aria-label="Checkbox for following text input">
+          </div>
         </div>
+        <input type="text" id="other-desc" class="form-control" aria-label="Text input with checkbox"
+          placeholder="Please provide a short description...">
       </div>
-      <input type="text" id="other-desc" class="form-control" aria-label="Text input with checkbox"
-        placeholder="Please provide a short description...">
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+
     </div>
-
-    <button class="btn btn-primary" type="submit">Submit</button>
-
-  </div>
+  </form>
 
   <footer class="footer">
     <div class="container">
-      <p>
-        <a href="/news" id="newsRoom">News Room</a> | |
-        <a href="https://www.redcross.org/donate/donation.html/?donamt=0" target="_blank" id="donate">Donate
-        </a>| |
-        <a href="/regvform" id="aboutUs">Volunteer</a> | |
-        <a href="/regbform" id="aboutUs">Register Business</a>
+      <p class="text-center">
+        Copyright © 2019 |
+        <a href="https://github.com/ramonb621/GroupProject2" id="github">GitHub Repo</a> |
+        <a href="https://www.fema.gov/openfema-api-documentation" id="fema">OpenFEMA API</a>
       </p>
     </div>
   </footer>
