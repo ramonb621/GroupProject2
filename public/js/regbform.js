@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    var userBusiness = $("#business");
+    var userContact = $("#contact");
+    var userEmail = $("#email");
+    var userCity = $("#city");
+    var userState = $("#state");
+    var userZip = $("#zip");
 
     var userBusiness = $("#business");
     var userContact = $("#contact");
