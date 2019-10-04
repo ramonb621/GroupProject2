@@ -16,22 +16,22 @@ module.exports = function(app) {
       res.json(dbBusiness);
     });
   });
-/// JOIN both tables based on the GEO DATA 
-// app.get("/api/businesses/services", function(req, res) {
-//   let where = {};
-//   if (req.query.state) {
-//     where.state = req.query.state;
-//   }
-//   if (req.query.city) {
-//     where.city = req.query.city;
-//   }
-//   if (req.query.zip) {
-//     where.zipCode = req.query.zip;
-//   }
-//   db.Business.findAll({ where }).then(function(dbBusiness) {
-    
-// });
-///
+  /// JOIN both tables based on the GEO DATA
+  // app.get("/api/businesses/services", function(req, res) {
+  //   let where = {};
+  //   if (req.query.state) {
+  //     where.state = req.query.state;
+  //   }
+  //   if (req.query.city) {
+  //     where.city = req.query.city;
+  //   }
+  //   if (req.query.zip) {
+  //     where.zipCode = req.query.zip;
+  //   }
+  //   db.Business.findAll({ where }).then(function(dbBusiness) {
+
+  // });
+  ///
 
   app.get("/api/businesses/:category", function(req, res) {
     let where = {};
@@ -69,6 +69,7 @@ module.exports = function(app) {
       city: req.body.city,
       state: req.body.state,
       zipCode: req.body.zip
+      // eslint-disable-next-line no-unused-vars
     }).then(function(dbBusiness) {
       // res.json(dbBusiness);
       res.redirect("/regbform2");
