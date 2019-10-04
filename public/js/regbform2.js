@@ -9,8 +9,8 @@ $(document).ready(function() {
   var transD = $("#trans-desc");
   var otherD = $("#other-desc");
 
-    function handleAuthorFormSubmit(event) {
-        event.preventDefault();
+  function handleAuthorFormSubmit(event) {
+    event.preventDefault();
         if (document.getElementById('Food').checked) {
             if (!foodD.val().trim()) {
                 foodD.addClass("is-invalid");

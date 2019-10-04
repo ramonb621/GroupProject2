@@ -5,14 +5,7 @@ $(document).ready(function () {
     var userCity = $("#city");
     var userState = $("#state");
     var userZip = $("#zip");
-
-    var userBusiness = $("#business");
-    var userContact = $("#contact");
-    var userEmail = $("#email");
-    var userCity = $("#city");
-    var userState = $("#state");
-    var userZip = $("#zip");
-
+    
     $("#business-reg-form").on("submit", function (event) {
         // if (!userBusiness.val().trim() || !userContact.val().trim() || !userEmail.val().trim() || !userCity.val().trim() || !userState.val().trim() || !userZip.val().trim()) {
         //     event.preventDefault();
