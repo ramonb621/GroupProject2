@@ -57,119 +57,203 @@
   </nav>
 
   <h2 id="h2shadows" style="color: black; padding-top: 20px;">REGISTER YOUR BUSINESS</h2>
+  <div id="regForm">
 
-  <form action="/api/businesses" method="POST" class="needs-validation" id="business-reg-form" novalidate>
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label>Business name</label>
-        <input type="text" class="form-control" id="business" name="business" placeholder="Business name" required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom02">Contact name</label>
-        <input type="text" class="form-control" id="contact" name="contact" placeholder="Contact name" required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustomUsername">Email</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
+    <!-- <form action="/api/businesses" method="POST" class="needs-validation pb-0" id="business-reg-form" novalidate> -->
+    <form class="needs-validation pb-0" id="business-reg-form" novalidate>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label>Business name</label>
+          <input type="text" class="form-control" id="business" name="business" placeholder="Business name" required>
+          <div class="valid-feedback">
+            Looks good!
           </div>
-          <input type="text" class="form-control" id="email" name="email" placeholder="Email"
-            aria-describedby="inputGroupPrepend" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom02">Contact name</label>
+          <input type="text" class="form-control" id="contact" name="contact" placeholder="Contact name" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationCustomUsername">Email</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+            </div>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Email"
+              aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please provide a valid email address.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom03">City</label>
+          <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
           <div class="invalid-feedback">
-            Please provide a valid email address.
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom04">State</label>
+          <input type="text" class="form-control" list="datalist" id="state" name="state" placeholder="State" required>
+          <datalist id="datalist">
+            <option value="AL"></option>
+            <option value="AK"></option>
+            <option value="AR"></option>
+            <option value="AZ"></option>
+            <option value="CA"></option>
+            <option value="CO"></option>
+            <option value="CT"></option>
+            <option value="DC"></option>
+            <option value="DE"></option>
+            <option value="FL"></option>
+            <option value="GA"></option>
+            <option value="GU"></option>
+            <option value="HI"></option>
+            <option value="IA"></option>
+            <option value="ID"></option>
+            <option value="IL"></option>
+            <option value="IN"></option>
+            <option value="KS"></option>
+            <option value="KY"></option>
+            <option value="LA"></option>
+            <option value="MA"></option>
+            <option value="MD"></option>
+            <option value="ME"></option>
+            <option value="MI"></option>
+            <option value="MN"></option>
+            <option value="MO"></option>
+            <option value="MP"></option>
+            <option value="MS"></option>
+            <option value="MT"></option>
+            <option value="NC"></option>
+            <option value="ND"></option>
+            <option value="NE"></option>
+            <option value="NH"></option>
+            <option value="NJ"></option>
+            <option value="NM"></option>
+            <option value="NV"></option>
+            <option value="NY"></option>
+            <option value="OH"></option>
+            <option value="OK"></option>
+            <option value="OR"></option>
+            <option value="PA"></option>
+            <option value="PR"></option>
+            <option value="RI"></option>
+            <option value="SC"></option>
+            <option value="SD"></option>
+            <option value="TN"></option>
+            <option value="TX"></option>
+            <option value="UM"></option>
+            <option value="UT"></option>
+            <option value="VA"></option>
+            <option value="VI"></option>
+            <option value="VT"></option>
+            <option value="WA"></option>
+            <option value="WI"></option>
+            <option value="WV"></option>
+            <option value="WY"></option>
+          </datalist>
+          <div class="invalid-feedback">
+            Please provide a valid state.
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom05">Zip</label>
+          <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
           </div>
         </div>
       </div>
-    </div>
-    <div class="form-row">
-      <div class="col-md-6 mb-3">
-        <label for="validationCustom03">City</label>
-        <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
-        <div class="invalid-feedback">
-          Please provide a valid city.
+      <h2 id="h2shadows" style="color: black; padding-top: 20px;">TYPES OF SERVICES</h2>
+      <div class="form-row">
+        <h5>Food</h5>
+        <div class="input-group mb-3" id="food">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" name="category" value="Food" id="Food"
+                aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <input type="text" name="description" id="food-desc" class="form-control"
+            aria-label="Text input with checkbox" placeholder="Please provide a short description...">
         </div>
       </div>
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom04">State</label>
-        <input type="text" class="form-control" list="datalist" id="state" name="state" placeholder="State" required>
-        <datalist id="datalist">
-          <option value="AL"></option>
-          <option value="AK"></option>
-          <option value="AR"></option>
-          <option value="AZ"></option>
-          <option value="CA"></option>
-          <option value="CO"></option>
-          <option value="CT"></option>
-          <option value="DC"></option>
-          <option value="DE"></option>
-          <option value="FL"></option>
-          <option value="GA"></option>
-          <option value="GU"></option>
-          <option value="HI"></option>
-          <option value="IA"></option>
-          <option value="ID"></option>
-          <option value="IL"></option>
-          <option value="IN"></option>
-          <option value="KS"></option>
-          <option value="KY"></option>
-          <option value="LA"></option>
-          <option value="MA"></option>
-          <option value="MD"></option>
-          <option value="ME"></option>
-          <option value="MI"></option>
-          <option value="MN"></option>
-          <option value="MO"></option>
-          <option value="MP"></option>
-          <option value="MS"></option>
-          <option value="MT"></option>
-          <option value="NC"></option>
-          <option value="ND"></option>
-          <option value="NE"></option>
-          <option value="NH"></option>
-          <option value="NJ"></option>
-          <option value="NM"></option>
-          <option value="NV"></option>
-          <option value="NY"></option>
-          <option value="OH"></option>
-          <option value="OK"></option>
-          <option value="OR"></option>
-          <option value="PA"></option>
-          <option value="PR"></option>
-          <option value="RI"></option>
-          <option value="SC"></option>
-          <option value="SD"></option>
-          <option value="TN"></option>
-          <option value="TX"></option>
-          <option value="UM"></option>
-          <option value="UT"></option>
-          <option value="VA"></option>
-          <option value="VI"></option>
-          <option value="VT"></option>
-          <option value="WA"></option>
-          <option value="WI"></option>
-          <option value="WV"></option>
-          <option value="WY"></option>
-        </datalist>
-        <div class="invalid-feedback">
-          Please provide a valid state.
+      <div class="form-row">
+        <h5>Drinks</h5>
+        <div class="input-group mb-3" id="drinks">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" name="category" value="Drinks" id="Drinks"
+                aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <input type="text" name="description" id="drinks-desc" class="form-control"
+            aria-label="Text input with checkbox" placeholder="Please provide a short description...">
         </div>
       </div>
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom05">Zip</label>
-        <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip" required>
-        <div class="invalid-feedback">
-          Please provide a valid zip.
+      <div class="form-row">
+        <h5>Shelter</h5>
+        <div class="input-group mb-3" id="shelter">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" name="category" value="Shelter" id="Shelter"
+                aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <input type="text" name="description" id="shelter-desc" class="form-control"
+            aria-label="Text input with checkbox" placeholder="Please provide a short description...">
         </div>
       </div>
-    </div>
-    <button class="btn btn-primary" type="button">Next</button>
-  </form>
+      <div class="form-row">
+        <h5>Clothing</h5>
+        <div class="input-group mb-3" id="clothing">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" name="category" value="Clothing" id="Clothing"
+                aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <input type="text" name="description" id="clothing-desc" class="form-control"
+            aria-label="Text input with checkbox" placeholder="Please provide a short description...">
+        </div>
+      </div>
+      <div class="form-row">
+        <h5>Transportation</h5>
+        <div class="input-group mb-3" id="transportation">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" name="category" value="Transportation" id="Transportation"
+                aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <input type="text" name="description" id="trans-desc" class="form-control"
+            aria-label="Text input with checkbox" placeholder="Please provide a short description...">
+        </div>
+      </div>
+      <div class="form-row">
+        <h5>Other</h5>
+        <div class="input-group mb-3" id="other">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" name="category" value="Other" id="Other"
+                aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <input type="text" name="description" id="other-desc" class="form-control"
+            aria-label="Text input with checkbox" placeholder="Please provide a short description...">
+        </div>
+      </div>
+      <div class="form">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
 
   <footer class="footer">
     <div class="container">

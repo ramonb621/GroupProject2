@@ -56,6 +56,118 @@
         </div>
     </nav>
 
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <form class="needs-validation p-0" id="service-form" novalidate>
+                    <h2 id="h2shadows" style="color: black; padding-top: 20px;">ASSISTANCE NEAR YOU</h2>
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom03">City</label>
+                            <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">State</label>
+                            <input type="text" class="form-control" list="datalist" id="state" name="state" placeholder="State"
+                                required>
+                            <datalist id="datalist">
+                                <option value="AL"></option>
+                                <option value="AK"></option>
+                                <option value="AR"></option>
+                                <option value="AZ"></option>
+                                <option value="CA"></option>
+                                <option value="CO"></option>
+                                <option value="CT"></option>
+                                <option value="DC"></option>
+                                <option value="DE"></option>
+                                <option value="FL"></option>
+                                <option value="GA"></option>
+                                <option value="GU"></option>
+                                <option value="HI"></option>
+                                <option value="IA"></option>
+                                <option value="ID"></option>
+                                <option value="IL"></option>
+                                <option value="IN"></option>
+                                <option value="KS"></option>
+                                <option value="KY"></option>
+                                <option value="LA"></option>
+                                <option value="MA"></option>
+                                <option value="MD"></option>
+                                <option value="ME"></option>
+                                <option value="MI"></option>
+                                <option value="MN"></option>
+                                <option value="MO"></option>
+                                <option value="MP"></option>
+                                <option value="MS"></option>
+                                <option value="MT"></option>
+                                <option value="NC"></option>
+                                <option value="ND"></option>
+                                <option value="NE"></option>
+                                <option value="NH"></option>
+                                <option value="NJ"></option>
+                                <option value="NM"></option>
+                                <option value="NV"></option>
+                                <option value="NY"></option>
+                                <option value="OH"></option>
+                                <option value="OK"></option>
+                                <option value="OR"></option>
+                                <option value="PA"></option>
+                                <option value="PR"></option>
+                                <option value="RI"></option>
+                                <option value="SC"></option>
+                                <option value="SD"></option>
+                                <option value="TN"></option>
+                                <option value="TX"></option>
+                                <option value="UM"></option>
+                                <option value="UT"></option>
+                                <option value="VA"></option>
+                                <option value="VI"></option>
+                                <option value="VT"></option>
+                                <option value="WA"></option>
+                                <option value="WI"></option>
+                                <option value="WV"></option>
+                                <option value="WY"></option>
+                            </datalist>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom05">Zip</label>
+                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>Services</label>
+                            <input type="text" class="form-control" list="serviceList" id="service" name="service" placeholder="Service Filter"
+                                required>
+                            <datalist id="serviceList">
+                                <option value="Food"></option>
+                                <option value="Drinks"></option>
+                                <option value="Shelter"></option>
+                                <option value="Clothing"></option>
+                                <option value="Transportation"></option>
+                                <option value="Other"></option>
+                            </datalist>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+
+                <h5>Search Results</h5>
+                <div id="searchResults">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <p class="text-center">
@@ -66,6 +178,8 @@
         </div>
     </footer>
 
+
+    <script src="../js/service.js" type="text/javascript"></script>
 <script>
 var  zipCode = ""
 var geoData = {
@@ -99,10 +213,6 @@ $.get("/api/businesses/services",geoData, function(dataBus){
 //     })
 
 //    }
-
-
-
-
 </script>
 </body>
 
