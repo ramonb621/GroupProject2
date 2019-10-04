@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,15 +86,27 @@
         </div>
       </div>
     </div>
-    <div class="form-row">
-      <div class="col-md-6 mb-3">
-        <label for="validationCustom03">City</label>
-        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustomUsername">Email</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required>
         <div class="invalid-feedback">
-          Please provide a valid city.
+          Please provide a valid email address.
         </div>
       </div>
-      <div class="col-md-3 mb-3">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">City</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
         <label for="validationCustom04">State</label>
         <input type="text" class="form-control" list="datalist" id="state" name="state" placeholder="State" required>
         <datalist id="datalist">
@@ -160,11 +171,20 @@
           Please provide a valid state.
         </div>
       </div>
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom05">Zip</label>
-        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-        <div class="invalid-feedback">
-          Please provide a valid zip.
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom05">Zip</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    
+    <h5>Relevant Experience</h5>
+    <div class="input-group mb-3" id="other">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <input type="checkbox" aria-label="Checkbox for following text input">
         </div>
       </div>
 
@@ -193,7 +213,5 @@
     </div>
   </footer>
 
-
 </body>
-
 </html>

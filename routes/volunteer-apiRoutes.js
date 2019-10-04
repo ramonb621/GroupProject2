@@ -22,28 +22,31 @@ module.exports = function(app) {
   });
 
   app.put("/api/volunteers", function(req, res) {
-    db.Volunteer.update({
-      name: req.body.name,
-      email: req.body.email,
-      services: req.body.services,
-      state: req.body.state,
-      city: req.body.city,
-      zipCode: req.body.zipCode
-    }, {
-      where: {
-        id: req.body.id
+    db.Volunteer.update(
+      {
+        name: req.body.name,
+        email: req.body.email,
+        services: req.body.services,
+        state: req.body.state,
+        city: req.body.city,
+        zipCode: req.body.zipCode
+      },
+      {
+        where: {
+          id: req.body.id
+        }
       }
-    }).then(function(dbVolunteer) {
+    ).then(function(dbVolunteer) {
       res.json(dbVolunteer);
     });
   });
 
   app.delete("/api/volunteers/:id", function(req, res) {
-    db.Volunteer.destroy({ 
-      where: { 
-        id: req.params.id 
+    db.Volunteer.destroy({
+      where: {
+        id: req.params.id
       }
-    }).then(function(dbVolunteer){
+    }).then(function(dbVolunteer) {
       res.json(dbVolunteer);
     });
   });
