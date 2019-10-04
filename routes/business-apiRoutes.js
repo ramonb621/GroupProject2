@@ -1,7 +1,7 @@
 var db = require("../models");
 
-module.exports = function (app) {
-  app.get("/api/businesses", function (req, res) {
+module.exports = function(app) {
+  app.get("/api/businesses", function(req, res) {
     let where = {};
     if (req.query.state) {
       where.state = req.query.state;
@@ -12,11 +12,11 @@ module.exports = function (app) {
     if (req.query.zip) {
       where.zipCode = req.query.zip;
     }
-    db.Business.findAll({ where }).then(function (dbBusiness) {
+    db.Business.findAll({ where }).then(function(dbBusiness) {
       res.json(dbBusiness);
     });
   });
-  app.get("/api/businesses/:category", function (req, res) {
+  app.get("/api/businesses/:category", function(req, res) {
     let where = {};
     if (req.query.state) {
       where.state = req.query.state;
@@ -38,14 +38,14 @@ module.exports = function (app) {
           }
         }
       ]
-    }).then(function (dbBusiness) {
+    }).then(function(dbBusiness) {
       res.json(dbBusiness);
     });
   });
 
-  app.post("/api/businesses", function (req, res) {
+  app.post("/api/businesses", function(req, res) {
     console.log(req.body);
-    let Services = req.body.services.map(function (service) {
+    let Services = req.body.services.map(function(service) {
       return service.category;
     });
     db.Business.create(
@@ -60,14 +60,15 @@ module.exports = function (app) {
       },
       {
         include: [db.Services]
-      }).then(function (dbBusiness) {
-        res.json(dbBusiness);
-        // res.redirect("/regbform2");
-      });
+      }
+    ).then(function(dbBusiness) {
+      res.json(dbBusiness);
+      // res.redirect("/regbform2");
+    });
   });
 
   // Extra Routes
-  app.put("/api/businesses", function (req, res) {
+  app.put("/api/businesses", function(req, res) {
     db.Business.update(
       {
         businessName: req.body.name,
@@ -82,17 +83,17 @@ module.exports = function (app) {
           id: req.body.id
         }
       }
-    ).then(function (dbBusiness) {
+    ).then(function(dbBusiness) {
       res.json(dbBusiness);
     });
   });
 
-  app.delete("/api/businesses/:id", function (req, res) {
+  app.delete("/api/businesses/:id", function(req, res) {
     db.Business.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function (dbBusiness) {
+    }).then(function(dbBusiness) {
       res.json(dbBusiness);
     });
   });
