@@ -50,7 +50,7 @@ module.exports = function(app) {
     });
   });
 
-  // Extra APIs 
+  // Extra APIs
   app.put("/api/services", function(req, res) {
     db.Services.update(
       {
