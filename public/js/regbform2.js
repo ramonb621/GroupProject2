@@ -1,14 +1,13 @@
-$(document).ready(function () {
+$(document).ready(function() {
+  $(document).on("submit", "#business-reg-form2", handleAuthorFormSubmit);
+// $("#business-reg-form2").on("submit", function (event) {});
 
-    $(document).on("submit", "#business-reg-form2", handleAuthorFormSubmit);
-    // $("#business-reg-form2").on("submit", function (event) {});
-
-    var foodD = $("#food-desc");
-    var drinksD = $("#drinks-desc");
-    var shelterD = $("#shelter-desc");
-    var clothesD = $("#clothing-desc");
-    var transD = $("#trans-desc");
-    var otherD = $("#other-desc");
+  var foodD = $("#food-desc");
+  var drinksD = $("#drinks-desc");
+  var shelterD = $("#shelter-desc");
+  var clothesD = $("#clothing-desc");
+  var transD = $("#trans-desc");
+  var otherD = $("#other-desc");
 
     function handleAuthorFormSubmit(event) {
         event.preventDefault();
@@ -84,27 +83,27 @@ $(document).ready(function () {
                 addToServ(other);
             }
         }
-
+        
         $("#Food").val("");
         $("#Drinks").val("");
         $("#Shelter").val("");
         $("#Clothing").val("");
         $("#Transportation").val("");
         $("#Other").val("");
-
+        
         $("#regbform2").empty();
         $("#regbform2").append(
             "<p id='confirm'><b> We've received your form. Thank you!</b></p>"
-        );
-        $("#regbform2").append(
-            "<a href='/'><button class='btn btn-info' type='submit'>HOME</button></a>"
-        );
-    }
-
-    function addToServ(serviceData) {
-        $.post("/api/services", serviceData).then(function(data){
-            console.log(data);
+            );
+            $("#regbform2").append(
+                "<a href='/'><button class='btn btn-info' type='submit'>HOME</button></a>"
+                );
+            }
+            
+            function addToServ(serviceData) {
+                $.post("/api/services", serviceData).then(function (data) {
+                    console.log(data);
+                });
+            }
+            
         });
-    }
-
-});

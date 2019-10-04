@@ -67,21 +67,29 @@
     </footer>
 
 <script>
-var  zipCode = ""
-var geoData = {
-    state:"",
-    city:"",
-    zipCode: zipCode
+const zipCode = $("#zip").val().trim();
+const state = $("#state").val().trim();
+const city = $("#city").val().trim();
+const service = $().val();
+let filters = {};
+if ( state !== "" ) { filters.state = state; }
+if ( city !== "" ) { filters.city = city; }
+if ( zipCode !== "" ) { filters.zip = zipCode; }
+
+if (/* check if services === default value */) {
+    //// create a route called /api/businesses/services and return all services related with a geodata
+    $.get("/api/businesses" + $.param(filters)).then(function(businesses){
+        console.log(business)
+    // loop and append to the table on the page
+    })
+} else {
+    //call the route asking for the business with this zipcode
+    $.get("/api/businesses/" + service + filters).then(function(dataBus){
+        console.log(dataBus)
+    // loop and append to the table on the page
+    })
 }
-//// create a route called /api/businesses/services and return all services related with a geodata
 
-//call the route asking for the business with this zipcode
-$.get("/api/businesses/services",geoData, function(dataBus){
-    console.log(services)
-
-}).then(function(){
-// loop and append to the table on the page
-})
 
     // we need a route that receive all the busnesses id and come back with all the services
 // we will receive an array with objects (services with their business info )
@@ -99,10 +107,6 @@ $.get("/api/businesses/services",geoData, function(dataBus){
 //     })
 
 //    }
-
-
-
-
 </script>
 </body>
 
