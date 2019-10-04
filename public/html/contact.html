@@ -91,7 +91,7 @@
       <label for="inputMessage">Message</label>
       <input type="text" class="form-control" id="messagefld" required>
     </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-primary" id="submitBtn" type="submit">Submit</button>
   </form>
 
   <script>
@@ -110,6 +110,9 @@
         });
       }, false);
     })();
+    $("#submitBtn").click(function() {
+  alert( "Thank you for contacting us! We have received your message and will reply to you shortly" );
+});
   </script>
   <footer class="footer">
     <div class="container">
@@ -120,7 +123,6 @@
       </p>
     </div>
   </footer>
-
 
 </body>
 
