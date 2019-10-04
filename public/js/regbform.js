@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(document).ready(function() {
+    $('#form').parsley();
     var userBusiness = $("#business");
     var userContact = $("#contact");
     var userEmail = $("#email");
