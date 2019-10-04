@@ -7,7 +7,7 @@ $(document).ready(function() {
   var userState = $("#state");
   var userZip = $("#zip");
 
-  $("#business-reg-form").on("submit", function (event) {
+  $("#business-reg-form").on("submit", function(event) {
     // if (!userBusiness.val().trim() || !userContact.val().trim() || !userEmail.val().trim() || !userCity.val().trim() || !userState.val().trim() || !userZip.val().trim()) {
     //     event.preventDefault();
     //     return;
