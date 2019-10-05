@@ -16,7 +16,10 @@ module.exports = function(app) {
       res.json(dbBusiness);
     });
   });
+<<<<<<< HEAD
 
+=======
+>>>>>>> f917422842534da0600658799f9cf9f524c3ef1e
   app.get("/api/businesses/:category", function(req, res) {
     let where = {};
     if (req.query.state) {
@@ -46,16 +49,25 @@ module.exports = function(app) {
 
   app.post("/api/businesses", function(req, res) {
     console.log(req.body);
-    db.Business.create({
-      businessName: req.body.business,
-      contactName: req.body.contact,
-      email: req.body.email,
-      city: req.body.city,
-      state: req.body.state,
-      zipCode: req.body.zip
-    }).then(function(dbBusiness) {
-      // res.json(dbBusiness);
-      res.redirect("/regbform2");
+    let Services = req.body.services.map(function(service) {
+      return service.category;
+    });
+    db.Business.create(
+      {
+        businessName: req.body.business,
+        contactName: req.body.contact,
+        email: req.body.email,
+        city: req.body.city,
+        state: req.body.state,
+        zipCode: req.body.zip,
+        Service: Services
+      },
+      {
+        include: [db.Services]
+      }
+    ).then(function(dbBusiness) {
+      res.json(dbBusiness);
+      // res.redirect("/regbform2");
     });
   });
 
