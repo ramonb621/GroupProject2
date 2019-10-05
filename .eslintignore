@@ -1,3 +1,4 @@
 models/index.js
 node_modules
-# public/assets/images
+public/assets/images
+parsley.min.js

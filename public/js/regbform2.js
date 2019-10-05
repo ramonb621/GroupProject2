@@ -101,11 +101,7 @@ $(document).ready(function() {
   }
 
   function addToServ(serviceData) {
-<<<<<<< HEAD
-    $.post("/api/services", serviceData).then(function (data) {
-=======
     $.post("/api/services", serviceData).then(function(data) {
->>>>>>> f917422842534da0600658799f9cf9f524c3ef1e
       console.log(data);
     });
   }
