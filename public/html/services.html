@@ -10,6 +10,8 @@
     <!--Bootstrap CSS reference-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
     <!--Internal CSS referene-->
     <link rel="stylesheet" href="../styles/styles.css">
     <!--Google Fonts reference-->
@@ -56,6 +58,95 @@
         </div>
     </nav>
 
+    <h2 id="h2shadows" style="color: black; padding-top: 20px;">Assistance Near Me</h2>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <!-- <th scope="col">Name</th> -->
+                <th scope="col">Business Name</th>
+                <th scope="col">Service</th>
+                <th scope="col">State</th>
+                <th scope="col">Zip</th>
+                <th scope="col">Contact</th>
+                <!-- <th scope="col">County</th>
+                        <th scope="col">Type</th>-->
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody id="bodynews">
+            <tr>
+                <td>Amazing Bagels</td>
+                <td>Food</td>
+                <td>TX</td>
+                <td>75189</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Four Seasons Hotel at The Surf Club</td>
+                <td>Shelter</td>
+                <td>FL</td>
+                <td>33154</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Fashion Store</td>
+                <td>Clothing</td>
+                <td>SC</td>
+                <td>29401</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Uber</td>
+                <td>Transportation</td>
+                <td>CA</td>
+                <td>93001 - 93009</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Starbucks</td>
+                <td>Drinks</td>
+                <td>NC</td>
+                <td>27007</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Critical Care Center</td>
+                <td>Medical</td>
+                <td>CA</td>
+                <td>93004</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
     <footer class="footer">
         <div class="container">
             <p class="text-center">
@@ -66,29 +157,29 @@
         </div>
     </footer>
 
-<script>
-const zipCode = $("#zip").val().trim();
-const state = $("#state").val().trim();
-const city = $("#city").val().trim();
-const service = $().val();
-let filters = {};
-if ( state !== "" ) { filters.state = state; }
-if ( city !== "" ) { filters.city = city; }
-if ( zipCode !== "" ) { filters.zip = zipCode; }
+    <script>
+        const zipCode = $("#zip").val().trim();
+        const state = $("#state").val().trim();
+        const city = $("#city").val().trim();
+        const service = $().val();
+        let filters = {};
+        if (state !== "") { filters.state = state; }
+        if (city !== "") { filters.city = city; }
+        if (zipCode !== "") { filters.zip = zipCode; }
 
-if (/* check if services === default value */) {
-    //// create a route called /api/businesses/services and return all services related with a geodata
-    $.get("/api/businesses" + $.param(filters)).then(function(businesses){
-        console.log(business)
-    // loop and append to the table on the page
-    })
-} else {
-    //call the route asking for the business with this zipcode
-    $.get("/api/businesses/" + service + filters).then(function(dataBus){
-        console.log(dataBus)
-    // loop and append to the table on the page
-    })
-}
+        if (/* check if services === default value */) {
+            //// create a route called /api/businesses/services and return all services related with a geodata
+            $.get("/api/businesses" + $.param(filters)).then(function (businesses) {
+                console.log(business)
+                // loop and append to the table on the page
+            })
+        } else {
+            //call the route asking for the business with this zipcode
+            $.get("/api/businesses/" + service + filters).then(function (dataBus) {
+                console.log(dataBus)
+                // loop and append to the table on the page
+            })
+        }
 
 
     // we need a route that receive all the busnesses id and come back with all the services
@@ -107,7 +198,7 @@ if (/* check if services === default value */) {
 //     })
 
 //    }
-</script>
+    </script>
 </body>
 
 </html>
