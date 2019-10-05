@@ -1,5 +1,9 @@
 $(document).ready(function() {
+<<<<<<< HEAD
+  var states = [
+=======
   const states = [
+>>>>>>> f917422842534da0600658799f9cf9f524c3ef1e
     "AK",
     "AL",
     "AR",
@@ -58,6 +62,9 @@ $(document).ready(function() {
     "WV",
     "WY"
   ];
+<<<<<<< HEAD
+=======
 
   console.info(states);
+>>>>>>> f917422842534da0600658799f9cf9f524c3ef1e
 });
