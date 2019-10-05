@@ -19,6 +19,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
+  <!--Parsley.JS-->
+  <script src="parsley.min.js"></script>
   <!-- Bootstrap Script -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -58,7 +60,7 @@
 
   <h2 id="h2shadows" style="color: black; padding-top: 20px;">CONTACT US</h2>
 
-  <form class="needs-validation" novalidate>
+  <form class="needs-validation" data-parsley-validate>
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">First name</label>
@@ -79,7 +81,7 @@
         <div class="input-group">
           <div class="input-group-prepend">
           </div>
-          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Email"
+          <input type="email" class="form-control" id="validationCustomUsername" placeholder="Email"
             aria-describedby="inputGroupPrepend" required>
           <div class="invalid-feedback">
             Please provide a valid email address.
@@ -87,11 +89,7 @@
         </div>
       </div>
     </div>
-    <div class="form-group">
-      <label for="inputMessage">Message</label>
-      <input type="text" class="form-control" id="messagefld" required>
-    </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-primary" id="submitBtn" type="submit">Send Email</button>
   </form>
 
   <script>
@@ -105,11 +103,26 @@
               event.preventDefault();
               event.stopPropagation();
             }
+            else if (form.checkValidity() === true) {
+              alert("Thank you for contacting us! We have received your message and will reply to you shortly.");
+            }
             form.classList.add('was-validated');
           }, false);
         });
       }, false);
     })();
+
+    var message = $('#messagefld').value;
+    var email = 'marinemekhakyan@gmail.com';
+    var subject = 'HelpFull Message';
+    $('button').click(function () {
+
+      var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message;
+
+      win = window.open(mailto_link, 'emailWindow');
+      if (win && win.open && !win.closed) win.close();
+
+    });
   </script>
   <footer class="footer">
     <div class="container">
@@ -120,7 +133,6 @@
       </p>
     </div>
   </footer>
-
 
 </body>
 

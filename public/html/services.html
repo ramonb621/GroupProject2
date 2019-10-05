@@ -10,6 +10,8 @@
     <!--Bootstrap CSS reference-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
     <!--Internal CSS referene-->
     <link rel="stylesheet" href="../styles/styles.css">
     <!--Google Fonts reference-->
@@ -56,117 +58,94 @@
         </div>
     </nav>
 
-    
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <form class="needs-validation p-0" id="service-form" novalidate>
-                    <h2 id="h2shadows" style="color: black; padding-top: 20px;">ASSISTANCE NEAR YOU</h2>
-                    <div class="form-row">
-                        <div class="col-md-3 mb-3">
-                            <label for="validationCustom03">City</label>
-                            <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
-                            <div class="invalid-feedback">
-                                Please provide a valid city.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="validationCustom04">State</label>
-                            <input type="text" class="form-control" list="datalist" id="state" name="state" placeholder="State"
-                                required>
-                            <datalist id="datalist">
-                                <option value="AL"></option>
-                                <option value="AK"></option>
-                                <option value="AR"></option>
-                                <option value="AZ"></option>
-                                <option value="CA"></option>
-                                <option value="CO"></option>
-                                <option value="CT"></option>
-                                <option value="DC"></option>
-                                <option value="DE"></option>
-                                <option value="FL"></option>
-                                <option value="GA"></option>
-                                <option value="GU"></option>
-                                <option value="HI"></option>
-                                <option value="IA"></option>
-                                <option value="ID"></option>
-                                <option value="IL"></option>
-                                <option value="IN"></option>
-                                <option value="KS"></option>
-                                <option value="KY"></option>
-                                <option value="LA"></option>
-                                <option value="MA"></option>
-                                <option value="MD"></option>
-                                <option value="ME"></option>
-                                <option value="MI"></option>
-                                <option value="MN"></option>
-                                <option value="MO"></option>
-                                <option value="MP"></option>
-                                <option value="MS"></option>
-                                <option value="MT"></option>
-                                <option value="NC"></option>
-                                <option value="ND"></option>
-                                <option value="NE"></option>
-                                <option value="NH"></option>
-                                <option value="NJ"></option>
-                                <option value="NM"></option>
-                                <option value="NV"></option>
-                                <option value="NY"></option>
-                                <option value="OH"></option>
-                                <option value="OK"></option>
-                                <option value="OR"></option>
-                                <option value="PA"></option>
-                                <option value="PR"></option>
-                                <option value="RI"></option>
-                                <option value="SC"></option>
-                                <option value="SD"></option>
-                                <option value="TN"></option>
-                                <option value="TX"></option>
-                                <option value="UM"></option>
-                                <option value="UT"></option>
-                                <option value="VA"></option>
-                                <option value="VI"></option>
-                                <option value="VT"></option>
-                                <option value="WA"></option>
-                                <option value="WI"></option>
-                                <option value="WV"></option>
-                                <option value="WY"></option>
-                            </datalist>
-                            <div class="invalid-feedback">
-                                Please provide a valid state.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="validationCustom05">Zip</label>
-                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip" required>
-                            <div class="invalid-feedback">
-                                Please provide a valid zip.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label>Services</label>
-                            <input type="text" class="form-control" list="serviceList" id="service" name="service" placeholder="Service Filter"
-                                required>
-                            <datalist id="serviceList">
-                                <option value="Food"></option>
-                                <option value="Drinks"></option>
-                                <option value="Shelter"></option>
-                                <option value="Clothing"></option>
-                                <option value="Transportation"></option>
-                                <option value="Other"></option>
-                            </datalist>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary" type="submit">Search</button>
-                </form>
+    <h2 id="h2shadows" style="color: black; padding-top: 20px;">Assistance Near Me</h2>
 
-                <h5>Search Results</h5>
-                <div id="searchResults">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <!-- <th scope="col">Name</th> -->
+                <th scope="col">Business Name</th>
+                <th scope="col">Service</th>
+                <th scope="col">State</th>
+                <th scope="col">Zip</th>
+                <th scope="col">Contact</th>
+                <!-- <th scope="col">County</th>
+                        <th scope="col">Type</th>-->
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody id="bodynews">
+            <tr>
+                <td>Amazing Bagels</td>
+                <td>Food</td>
+                <td>TX</td>
+                <td>75189</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
 
-                </div>
-            </div>
-        </div>
-    </div>
+            </tr>
+            <tr>
+                <td>Four Seasons Hotel at The Surf Club</td>
+                <td>Shelter</td>
+                <td>FL</td>
+                <td>33154</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Fashion Store</td>
+                <td>Clothing</td>
+                <td>SC</td>
+                <td>29401</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Uber</td>
+                <td>Transportation</td>
+                <td>CA</td>
+                <td>93001 - 93009</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Starbucks</td>
+                <td>Drinks</td>
+                <td>NC</td>
+                <td>27007</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Critical Care Center</td>
+                <td>Medical</td>
+                <td>CA</td>
+                <td>93004</td>
+                <td>
+                    <a id="contactLink" href="mailto:example@example.com">
+                        Get in touch
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
 
     <footer class="footer">
         <div class="container">
@@ -178,24 +157,30 @@
         </div>
     </footer>
 
+    <script>
+        const zipCode = $("#zip").val().trim();
+        const state = $("#state").val().trim();
+        const city = $("#city").val().trim();
+        const service = $().val();
+        let filters = {};
+        if (state !== "") { filters.state = state; }
+        if (city !== "") { filters.city = city; }
+        if (zipCode !== "") { filters.zip = zipCode; }
 
-    <script src="../js/service.js" type="text/javascript"></script>
-<script>
-var  zipCode = ""
-var geoData = {
-    state:"",
-    city:"",
-    zipCode: zipCode
-}
-//// create a route called /api/businesses/services and return all services related with a geodata
+        if (/* check if services === default value */) {
+            //// create a route called /api/businesses/services and return all services related with a geodata
+            $.get("/api/businesses" + $.param(filters)).then(function (businesses) {
+                console.log(business)
+                // loop and append to the table on the page
+            })
+        } else {
+            //call the route asking for the business with this zipcode
+            $.get("/api/businesses/" + service + filters).then(function (dataBus) {
+                console.log(dataBus)
+                // loop and append to the table on the page
+            })
+        }
 
-//call the route asking for the business with this zipcode
-$.get("/api/businesses/services",geoData, function(dataBus){
-    console.log(services)
-
-}).then(function(){
-// loop and append to the table on the page
-})
 
     // we need a route that receive all the busnesses id and come back with all the services
 // we will receive an array with objects (services with their business info )
@@ -213,7 +198,7 @@ $.get("/api/businesses/services",geoData, function(dataBus){
 //     })
 
 //    }
-</script>
+    </script>
 </body>
 
 </html>

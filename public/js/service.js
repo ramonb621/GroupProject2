@@ -146,9 +146,7 @@ $(document).ready(function() {
         desiredService.addClass("is-invalid");
         event.preventDefault();
       }
-    }
-  }
-});
+
 
 app.get("/api/businesses", function(req, res) {
   db.Business.findAll({

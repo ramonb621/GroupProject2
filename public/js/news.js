@@ -41,7 +41,7 @@ $(document).ready(function() {
               <td>${res[i].state}</td>
               <td>${res[i].declaredCountyArea}</td>
               <td>${res[i].title}</td>
-              <td><img src=${icon} height="30" width="30"></td>
+              <td><img src=${icon} height="50" width="50"></td>
           </tr>`);
     }
   });
