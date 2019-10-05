@@ -1,8 +1,4 @@
 $(document).ready(function() {
-<<<<<<< HEAD
-  $("#form").parsley();
-=======
->>>>>>> f917422842534da0600658799f9cf9f524c3ef1e
   var userBusiness = $("#business");
   var userContact = $("#contact");
   var userEmail = $("#email");
@@ -10,73 +6,6 @@ $(document).ready(function() {
   var userState = $("#state");
   var userZip = $("#zip");
 
-<<<<<<< HEAD
-  $("#business-reg-form").on("submit", function(event) {
-    // if (!userBusiness.val().trim() || !userContact.val().trim() || !userEmail.val().trim() || !userCity.val().trim() || !userState.val().trim() || !userZip.val().trim()) {
-    //     event.preventDefault();
-    //     return;
-    // }
-    var states = [
-      "AK",
-      "AL",
-      "AR",
-      "AS",
-      "AZ",
-      "CA",
-      "CO",
-      "CT",
-      "DC",
-      "DE",
-      "FL",
-      "GA",
-      "GU",
-      "HI",
-      "IA",
-      "ID",
-      "IL",
-      "IN",
-      "KS",
-      "KY",
-      "LA",
-      "MA",
-      "MD",
-      "ME",
-      "MI",
-      "MN",
-      "MO",
-      "MP",
-      "MS",
-      "MT",
-      "NC",
-      "ND",
-      "NE",
-      "NH",
-      "NJ",
-      "NM",
-      "NV",
-      "NY",
-      "OH",
-      "OK",
-      "OR",
-      "PA",
-      "PR",
-      "RI",
-      "SC",
-      "SD",
-      "TN",
-      "TX",
-      "UM",
-      "UT",
-      "VA",
-      "VI",
-      "VT",
-      "WA",
-      "WI",
-      "WV",
-      "WY"
-    ];
-    // If User didn't insert an input
-=======
   $(document).on("submit", "#business-reg-form", handleAuthorFormSubmit);
   // Business Registration
   var userBusiness = $("#business");
@@ -160,7 +89,6 @@ $(document).ready(function() {
   function handleAuthorFormSubmit(event) {
     event.preventDefault();
     // If User didn't insert an input for Registration
->>>>>>> f917422842534da0600658799f9cf9f524c3ef1e
     if (!userBusiness.val().trim()) {
       userBusiness.addClass("is-invalid");
       event.preventDefault();
@@ -180,23 +108,6 @@ $(document).ready(function() {
       userZip.addClass("is-invalid");
       event.preventDefault();
     }
-<<<<<<< HEAD
-    // If User Entered the Input
-    if (userBusiness.val().trim()) {
-      userBusiness.addClass("is-valid").removeClass("is-invalid");
-    }
-    if (userContact.val().trim()) {
-      userContact.addClass("is-valid").removeClass("is-invalid");
-    }
-    if (userEmail.val().trim()) {
-      userEmail.addClass("is-valid").removeClass("is-invalid");
-    }
-    if (userCity.val().trim()) {
-      userCity.addClass("is-valid").removeClass("is-invalid");
-    }
-    if (userState.val().trim()) {
-      if (states.indexOf(userState.val().trim()) !== -1) {
-=======
     // If User Entered the Input for Registration
     if (userBusiness.val().trim()) {
       userBusiness.addClass("is-valid").removeClass("is-invalid");
@@ -227,7 +138,6 @@ $(document).ready(function() {
     if (userState.val().trim()) {
       if (states.indexOf(userState.val().trim()) !== -1) {
         regData.state = userState.val().trim();
->>>>>>> f917422842534da0600658799f9cf9f524c3ef1e
         userState.addClass("is-valid").removeClass("is-invalid");
       } else {
         userState.addClass("is-invalid");
@@ -235,11 +145,6 @@ $(document).ready(function() {
       }
     }
     if (userZip.val().trim()) {
-<<<<<<< HEAD
-      userZip.addClass("is-valid").removeClass("is-invalid");
-    }
-  });
-=======
       if (userZip.val().trim().length !== 5 || isNaN(userZip.val().trim())) {
         userZip.addClass("is-invalid");
         event.preventDefault();
@@ -357,5 +262,4 @@ $(document).ready(function() {
       console.log(data);
     });
   }
->>>>>>> f917422842534da0600658799f9cf9f524c3ef1e
 });

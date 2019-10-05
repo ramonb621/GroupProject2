@@ -16,10 +16,6 @@ module.exports = function(app) {
       res.json(dbBusiness);
     });
   });
-<<<<<<< HEAD
-
-=======
->>>>>>> f917422842534da0600658799f9cf9f524c3ef1e
   app.get("/api/businesses/:category", function(req, res) {
     let where = {};
     if (req.query.state) {
